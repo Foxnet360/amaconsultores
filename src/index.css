@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Lato', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* Custom Gold Color */
+.text-gold-400 {
+  color: #d4af37;
+}
+
+.text-gold-500 {
+  color: #d4af37;
+}
+
+.text-gold-600 {
+  color: #b8941f;
+}
+
+.bg-gold-400 {
+  background-color: #d4af37;
+}
+
+.bg-gold-500 {
+  background-color: #d4af37;
+}
+
+.bg-gold-600 {
+  background-color: #b8941f;
+}
+
+.border-gold-400 {
+  border-color: #d4af37;
+}
+
+.border-gold-500 {
+  border-color: #d4af37;
+}
+
+.hover\:bg-gold-600:hover {
+  background-color: #b8941f;
+}
+
+.from-gold-500 {
+  --tw-gradient-from: #d4af37;
+}
+
+.to-gold-600 {
+  --tw-gradient-to: #b8941f;
+}
+
+.from-gold-600 {
+  --tw-gradient-from: #b8941f;
+}
+
+.to-gold-500 {
+  --tw-gradient-to: #d4af37;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus Styles for Accessibility */
+*:focus-visible {
+  @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+}
+
+/* Custom Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
