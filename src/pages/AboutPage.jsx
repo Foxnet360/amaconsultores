@@ -16,9 +16,9 @@ const AboutPage = () => {
         <meta property="og:description" content="Equipo especializado en migraciones internacionales con más de 10 años de experiencia." />
       </Helmet>
 
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-slate-blue">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-900 via-slate-900 to-blue-950 pt-32 pb-20">
+        <section className="bg-navy-800 pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ const AboutPage = () => {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white">
                 Quiénes Somos
               </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-navy-100 max-w-3xl mx-auto">
                 Un equipo humano, comprometido con cada historia
               </p>
             </motion.div>

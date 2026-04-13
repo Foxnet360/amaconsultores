@@ -1,6 +1,9 @@
 ## Pages
-- [AMA Consultores — Consultoría en Migraciones España y Colombia | amaconsultores.eu](/home): Consultoría especializada en migraciones internacionales y proyectos sociales. Más de 10 años de experiencia en España y Colombia.
-- [Contacto — AMA Consultores | Consultoría en Migraciones](/contact): Contacta con AMA Consultores para consultas sobre migraciones España y Colombia. Respuesta en 48h.
+- [AMA Consultores | Consultoría en Migraciones España y Colombia](/home): Consultoría especializada en migraciones internacionales y proyectos sociales. Más de 10 años de experiencia en España y Colombia.
+- [Aviso Legal | AMA Consultores](/avisolegal): Aviso legal de AMA Consultores. Información sobre condiciones de uso y responsabilidades.
+- [Blog | AMA Consultores](/blog): Blog de AMA Consultores. Artículos, guías y noticias sobre migraciones internacionales, regularización y proyectos sociales.
 - [Evaluación Gratuita - AMA Consultores](/preevaluationform): Solicita tu evaluación gratuita. Analizaremos tu caso y te proporcionaremos una consulta inicial sin compromiso.
+- [Política de Cookies | AMA Consultores](/politicacookies): Política de cookies de AMA Consultores. Información sobre el uso de cookies en nuestro sitio web.
+- [Política de Privacidad | AMA Consultores](/politicaprivacidad): Política de privacidad de AMA Consultores. Información sobre el tratamiento de datos personales.
 - [Quiénes Somos — AMA Consultores | Equipo especializado en migraciones](/about): Conoce al equipo de AMA Consultores: Ángela Morales, fundadora y directora, junto a Rafael Reyes y Xiomara Sánchez. Especializados en migraciones España y Colombia.
 - [Servicios — AMA Consultores | Homologación de títulos, arraigo, regularización y visados Colombia](/services): Servicios especializados en movilidad profesional, regularización migratoria, proyectos europeos y asesoría para entidades en España y Colombia.

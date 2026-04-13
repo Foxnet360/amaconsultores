@@ -1,103 +1,158 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Cookie } from 'lucide-react';
+import CookiePreferences from './CookiePreferences';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  const [showCookiePrefs, setShowCookiePrefs] = useState(false);
+
+  const footerLinks = {
+    servicios: [
+      { name: 'Regularización Migratoria', path: '/servicios/regularizacion' },
+      { name: 'Movilidad Profesional', path: '/servicios/movilidad' },
+      { name: 'Convenios España-Colombia', path: '/servicios/convenios' },
+      { name: 'Servicios para Empresas', path: '/servicios/empresas' },
+    ],
+    empresa: [
+      { name: 'Quiénes Somos', path: '/equipo' },
+      { name: 'Blog', path: '/blog' },
+      { name: 'Precios', path: '/precios' },
+      { name: 'Contacto', path: '/contacto' },
+    ],
+    legal: [
+      { name: 'Política de Privacidad', path: '/politica-de-privacidad' },
+      { name: 'Aviso Legal', path: '/aviso-legal' },
+      { name: 'Política de Cookies', path: '/politica-de-cookies' },
+    ],
+  };
+
   return (
-    <footer className="bg-slate-950 text-gray-300 border-t border-slate-800">
+    <footer className="bg-primary-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-800 to-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-gold-400 font-bold text-xl">AMA</span>
-              </div>
-              <span className="text-white font-bold text-lg">AMA Consultores</span>
-            </div>
-            <p className="text-sm text-gray-400">
-              Expertos en movilidad internacional y seguridad jurídica transnacional.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          {/* Logo y descripción */}
+          <div className="lg:col-span-1">
+            <Link to="/" className="inline-block mb-4">
+            <img
+              src="/images/Logo-transparente.png"
+              alt="Logo AMA Consultores - Consultoría en migraciones España-Colombia"
+              className="h-16 w-auto"
+            />
+            </Link>
+            <p className="font-lato text-white/70 text-sm leading-relaxed">
+              Consultoría especializada en migraciones internacionales y proyectos sociales 
+              para personas y entidades en España y Colombia.
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Servicios */}
           <div>
-            <span className="text-white font-semibold mb-4 block">Enlaces Rápidos</span>
+            <h3 className="font-poppins font-semibold text-gold mb-4">Servicios</h3>
             <ul className="space-y-2">
-              <li>
-                <Link to="/" className="text-sm hover:text-gold-400 transition-colors">
-                  Inicio
-                </Link>
-              </li>
-              <li>
-                <Link to="/servicios" className="text-sm hover:text-gold-400 transition-colors">
-                  Servicios
-                </Link>
-              </li>
-              <li>
-                <Link to="/sobre-nosotros" className="text-sm hover:text-gold-400 transition-colors">
-                  Quiénes somos
-                </Link>
-              </li>
-              <li>
-                <Link to="/contacto" className="text-sm hover:text-gold-400 transition-colors">
-                  Contacto
-                </Link>
-              </li>
+              {footerLinks.servicios.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="font-lato text-sm text-white/70 hover:text-gold transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Empresa */}
           <div>
-            <span className="text-white font-semibold mb-4 block">Servicios</span>
-            <ul className="space-y-2 text-sm text-gray-400">
-              <li>Movilidad Profesional</li>
-              <li>Integración y Protección</li>
-              <li>Consultoría Institucional</li>
-              <li>Gestión Documental</li>
+            <h3 className="font-poppins font-semibold text-gold mb-4">Empresa</h3>
+            <ul className="space-y-2">
+              {footerLinks.empresa.map((link) => (
+                <li key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="font-lato text-sm text-white/70 hover:text-gold transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contacto */}
           <div>
-            <span className="text-white font-semibold mb-4 block">Contacto</span>
+            <h3 className="font-poppins font-semibold text-gold mb-4">Contacto</h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-2 text-sm">
-                <Mail size={18} className="text-gold-400 mt-0.5 shrink-0" />
-                <div>
-                  <a href="mailto:angela.morales@amaconsultores.eu" className="text-gray-400 hover:text-gold-400 transition-colors block">
-                    angela.morales@amaconsultores.eu
-                  </a>
-                  <a href="mailto:info@amaconsultores.eu" className="text-gray-400 hover:text-gold-400 transition-colors block">
-                    info@amaconsultores.eu
-                  </a>
-                </div>
+              <li className="flex items-start gap-2">
+                <Mail size={18} className="text-gold mt-0.5 flex-shrink-0" />
+                <a
+                  href="mailto:info@amaconsultores.eu"
+                  className="font-lato text-sm text-white/70 hover:text-gold transition-colors"
+                >
+                  info@amaconsultores.eu
+                </a>
               </li>
-              <li className="flex items-start space-x-2 text-sm">
-                <Phone size={18} className="text-gold-400 mt-0.5 shrink-0" />
-                <div>
-                  <a href="tel:+34664824098" className="text-gray-400 hover:text-gold-400 transition-colors block">
+              <li className="flex items-start gap-2">
+                <Phone size={18} className="text-gold mt-0.5 flex-shrink-0" />
+                <div className="font-lato text-sm">
+                  <a href="tel:+34664824098" className="hover:text-gold transition-colors block text-white font-semibold">
                     España: +34 664 824 098
                   </a>
-                  <a href="tel:+573017174478" className="text-gray-400 hover:text-gold-400 transition-colors block">
+                  <a href="tel:+573017174478" className="hover:text-gold transition-colors block text-white/70">
                     Colombia: +57 301 717 4478
                   </a>
                 </div>
               </li>
-              <li className="flex items-start space-x-2 text-sm">
-                <MapPin size={18} className="text-gold-400 mt-0.5 shrink-0" />
-                <span className="text-gray-400">España y Colombia</span>
+              <li className="flex items-start gap-2">
+                <MapPin size={18} className="text-gold mt-0.5 flex-shrink-0" />
+                <span className="font-lato text-sm text-white/70">
+                  España y Colombia
+                </span>
               </li>
             </ul>
+            <a
+              href="/#asesoria"
+              className="inline-flex items-center justify-center gap-2 mt-6 px-6 py-3 bg-gold hover:bg-gold-dark text-primary-dark font-poppins font-semibold rounded-lg transition-all duration-300 text-sm"
+            >
+              Agendar consulta
+            </a>
           </div>
         </div>
 
-        <div className="border-t border-slate-800 mt-8 pt-8 text-center">
-          <p className="text-sm text-gray-400">
-            © 2026 AMA Consultores. Todos los derechos reservados. | Política de Privacidad | RGPD
-          </p>
+        {/* Legal Links y Copyright */}
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="font-lato text-sm text-white/50">
+              © {currentYear} AMA Consultores. Todos los derechos reservados.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 items-center">
+              {footerLinks.legal.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className="font-lato text-sm text-white/50 hover:text-gold transition-colors underline"
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <button
+                onClick={() => setShowCookiePrefs(true)}
+                className="font-lato text-sm text-white/50 hover:text-gold transition-colors underline flex items-center gap-1"
+              >
+                <Cookie size={14} />
+                Configuración de cookies
+              </button>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Cookie Preferences Modal */}
+      <CookiePreferences 
+        isOpen={showCookiePrefs} 
+        onClose={() => setShowCookiePrefs(false)} 
+      />
     </footer>
   );
 };

@@ -30,7 +30,7 @@ const CTASection = () => {
             <Link to="/contacto">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-800 to-blue-600 hover:from-blue-900 hover:to-blue-700 text-white font-bold text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all"
+                className="bg-gold-500 hover:bg-gold-600 text-navy font-bold text-lg px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all"
               >
                 Contactar para presupuesto
                 <ArrowRight className="ml-2" size={20} />

@@ -7,17 +7,22 @@ const TrustBlock = () => {
     {
       icon: Calendar,
       value: '+10',
-      label: 'años de experiencia en migraciones y DDHH',
+      label: 'años en DDHH y migración',
     },
     {
       icon: MapPin,
       value: '2',
-      label: 'países donde actuamos: España y Colombia',
+      label: 'países con cobertura jurídica',
     },
     {
       icon: Users,
-      value: 'Personalizado',
-      label: 'trato individual — trabajo con pocos casos a la vez',
+      value: '+2M€',
+      label: 'en proyectos europeos',
+    },
+    {
+      icon: Users,
+      value: '4',
+      label: 'personas de equipo especializado',
     },
   ];
 

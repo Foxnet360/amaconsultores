@@ -1,0 +1,22 @@
+[
+  {
+    "id": "333a7a19-928e-8043-aa89-ffd99bfbde84",
+    "title": "Articulo de Prueba",
+    "slug": "articulo-prueba",
+    "excerpt": "Este es un articulo de prueba",
+    "category": "Noticias",
+    "publishedDate": "2026-03-30",
+    "author": "Angela Morales",
+    "featuredImage": null
+  },
+  {
+    "id": "333a7a19-928e-80a5-a6a7-d95aa6fbe290",
+    "title": "Getting Started with Notion Databases",
+    "slug": "getting-started-notion-databases",
+    "excerpt": "Learn how to create and organize your first Notion database with this comprehensive beginner's guide.",
+    "category": "Guias",
+    "publishedDate": "2026-03-28",
+    "author": "Sarah Chen",
+    "featuredImage": null
+  }
+]

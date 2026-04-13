@@ -1,0 +1,11 @@
+--- src/components/sections/ConveniosSection.jsx
++++ src/components/sections/ConveniosSection.jsx
+@@ -97,7 +97,7 @@ const ConveniosSection = () => {
+               viewport={{ once: true }}
+               transition={{ delay: index * 0.1 }}
+             >
+-              <AccordionItem value={convenio.id} className="border border-gray-200 rounded-lg bg-white overflow-hidden">
++              <AccordionItem value={convenio.id} className="border-2 border-navy/20 rounded-lg bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                 <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                   <div className="flex items-center gap-4 text-left">
+                     <div className="w-12 h-12 bg-gold-500/20 rounded-lg flex items-center justify-center shrink-0">
