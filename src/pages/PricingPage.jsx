@@ -74,7 +74,7 @@ const PricingPage = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <PricingCard
                       title="Arraigo (cualquier tipo)"
-                      price="Desde 500€"
+                      price="380€ IVA incluido"
                       description="Arraigo social, laboral, familiar o por estudios"
                       icon={FileCheck}
                       features={[
@@ -86,7 +86,7 @@ const PricingPage = () => {
                     />
                     <PricingCard
                       title="Reagrupación Familiar"
-                      price="Desde 600€"
+                      price="380€ IVA incluido"
                       description="Trámites de reagrupación familiar completa"
                       icon={Globe}
                       features={[
@@ -98,7 +98,7 @@ const PricingPage = () => {
                     />
                     <PricingCard
                       title="Nacionalidad Española"
-                      price="Desde 600€"
+                      price="500€ IVA incluido"
                       description="Tramitación completa de nacionalidad"
                       icon={Building2}
                       features={[
@@ -129,7 +129,7 @@ const PricingPage = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <PricingCard
                       title="Homologación de Títulos"
-                      price="Desde 400€"
+                      price="Desde 360€"
                       description="Validación de estudios universitarios y profesionales"
                       icon={GraduationCap}
                       features={[
@@ -153,7 +153,7 @@ const PricingPage = () => {
                     />
                     <PricingCard
                       title="Visado Nómada Digital"
-                      price="Desde 800€"
+                      price="1.200€ IVA incluido"
                       description="Residencia para trabajadores remotos"
                       icon={Globe}
                       features={[
@@ -172,7 +172,7 @@ const PricingPage = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <PricingCard
                       title="Apostillas"
-                      price="20€/documento"
+                      price="Consulta tu caso"
                       description="Apostilla de documentos españoles para Colombia"
                       icon={FileCheck}
                       features={[
@@ -217,7 +217,7 @@ const PricingPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <PricingCard
                     title="Consulta Diagnóstico Inicial"
-                    price="300€"
+                    price="Presupuesto personalizado"
                     description="Evaluación completa de necesidades y viabilidad"
                     icon={Calculator}
                     features={[

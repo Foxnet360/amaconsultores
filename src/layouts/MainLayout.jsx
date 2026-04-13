@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import CookieConsentBanner from '@/components/CookieConsentBanner';
+import BackToTop from '@/components/BackToTop';
 
 const MainLayout = ({ children }) => {
   return (
@@ -19,6 +20,7 @@ const MainLayout = ({ children }) => {
       </main>
       <Footer />
       <CookieConsentBanner />
+      <BackToTop />
     </div>
   );
 };

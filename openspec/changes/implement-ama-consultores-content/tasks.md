@@ -138,16 +138,16 @@
 - [ ] 12.2 Agregar enlace a nueva página Colombia
 - [ ] 12.3 Agregar breadcrumbs en páginas de servicios
 - [ ] 12.4 Implementar scroll suave entre secciones (#anclas)
-- [ ] 12.5 Agregar "Volver arriba" en páginas largas
+- [x] 12.5 Agregar "Volver arriba" en páginas largas
 - [ ] 12.6 Verificar que todos los CTAs sean visibles y funcionales
 - [ ] 12.7 Testear navegación en móviles (menú hamburguesa)
 
 ## 13. Testing y QA
 
-- [ ] 13.1 Validar que todos los textos legales coincidan con Correcciones.xml
+- [x] 13.1 Validar que todos los textos legales coincidan con Correcciones.xml
 - [ ] 13.2 Verificar que todas las bases normativas estén correctamente citadas
-- [ ] 13.3 Comprobar que los precios (380€, 500€, 1.200€) sean correctos
-- [ ] 13.4 Testear responsive en: mobile (375px), tablet (768px), desktop (1440px)
+- [x] 13.3 Comprobar que los precios (380€, 500€, 1.200€) sean correctos
+- [x] 13.4 Testear responsive en: mobile (375px), tablet (768px), desktop (1440px)
 - [ ] 13.5 Ejecutar Lighthouse y obtener score >90 en performance y accesibilidad
 - [ ] 13.6 Verificar contraste de colores (WCAG 2.1 AA)
 - [ ] 13.7 Testear con screen reader (NVDA/VoiceOver)
