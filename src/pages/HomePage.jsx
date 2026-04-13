@@ -181,11 +181,7 @@ const HomePage = () => {
             >
               <Quote className="w-12 h-12 text-gold mx-auto mb-6" />
               <blockquote className="font-lato text-xl sm:text-2xl text-white italic mb-8 leading-relaxed">
-                "Llevo más de 10 años trabajando en el cruce entre el derecho, los derechos humanos 
-                y la migración — no porque sea un nicho interesante, sino porque detrás de cada 
-                expediente hay una persona que merece ser tratada con dignidad. Trabajo de forma 
-                personalizada, con pocas personas a la vez, y cobro siempre por mi trabajo porque 
-                la calidad del acompañamiento lo vale."
+                "Acompaño procesos migratorios con una mirada integral y empática: porque conozco el sistema por dentro... y también sé lo que se siente desde fuera."
               </blockquote>
               <div className="flex items-center justify-center gap-4">
                 <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center">
@@ -193,7 +189,7 @@ const HomePage = () => {
                 </div>
                 <div className="text-left">
                   <div className="font-poppins font-semibold text-white">Ángela Morales Aristizábal</div>
-                  <div className="font-lato text-sm text-white/70">Fundadora y Directora, AMA Consultores</div>
+                  <div className="font-lato text-sm text-white/70">CEO · AMA Consultores</div>
                 </div>
               </div>
             </motion.div>
