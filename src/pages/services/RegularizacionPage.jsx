@@ -2,7 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Home, Scale } from 'lucide-react';
+import { ChevronRight, Home, Scale, Star, X, Calendar, ArrowRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { LegalCard, LegalNotice } from '@/components/legal';
 import { 
   arraigos, 
@@ -288,12 +291,87 @@ const RegularizacionPage = () => {
                     BLOQUE 6 — REGULARIZACIÓN EXTRAORDINARIA 2026
                   </h2>
                   <p className="text-gold-400 font-semibold">
-                    Novedad 2026 · Consulta tu caso → formulario de contacto
+                    Base normativa: Real Decreto de 14 de abril de 2026 · BOE 15 de abril de 2026 · En vigor desde el 16 de abril
                   </p>
                 </div>
               </div>
 
-              <LegalCard {...regularizacionExtraordinaria} />
+              <Card className="bg-navy-800 shadow-lg border border-white/10 mb-6 hover:border-gold-500/30 transition-all">
+                <CardHeader className="pb-4">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <h3 className="text-xl font-bold text-white">
+                          Regularización Extraordinaria 2026
+                        </h3>
+                        <Badge variant="secondary" className="bg-gold-500 text-navy-900 font-bold">
+                          NOVEDAD ABRIL 2026
+                        </Badge>
+                      </div>
+                    </div>
+                    <span className="text-gold-400 font-semibold text-sm whitespace-nowrap">
+                      Consulta tu caso → formulario de contacto
+                    </span>
+                  </div>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <p className="text-white/80 mb-6 leading-relaxed">
+                    Proceso excepcional y de plazo limitado para personas en situación irregular que llevan años construyendo su vida en España. El plazo de solicitud cierra el 30 de junio de 2026.
+                  </p>
+                  <div className="mb-6">
+                    <h4 className="text-white font-semibold mb-3">¿Quién puede acogerse?</h4>
+                    <ol className="space-y-2">
+                      {[
+                        'Estar en España antes del 1 de enero de 2026',
+                        'Permanencia ininterrumpida de al menos 5 meses en el momento de la solicitud (sin haber salido de España en ese período)',
+                        'No tener antecedentes penales ni suponer amenaza para el orden o la seguridad pública',
+                        'Haber trabajado al menos 90 días, o tener contrato de trabajo',
+                        'No tener en trámite ninguna otra solicitud de residencia, renovación o modificación',
+                      ].map((item, index) => (
+                        <li key={index} className="flex items-start gap-3 text-white/80 text-sm leading-relaxed">
+                          <Star className="text-gold-400 flex-shrink-0 mt-1" size={14} fill="#d4af37" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                  <div className="mb-6">
+                    <h4 className="text-white font-semibold mb-3">¿Quién NO puede acogerse?</h4>
+                    <ol className="space-y-2">
+                      {[
+                        'Personas con estancia o residencia en vigor (estudiantes, no lucrativa, búsqueda de empleo)',
+                        'Personas con un procedimiento de residencia activo (arraigo en trámite, renovación pendiente...)',
+                        'Personas con orden de expulsión en vigor',
+                      ].map((item, index) => (
+                        <li key={index} className="flex items-start gap-3 text-white/80 text-sm leading-relaxed">
+                          <X className="text-red-400 flex-shrink-0 mt-1" size={14} />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ol>
+                  </div>
+                  <div className="mb-6">
+                    <h4 className="text-white font-semibold mb-3">Efectos:</h4>
+                    <p className="text-white/80 text-sm leading-relaxed mb-2">
+                      La admisión a trámite habilita para trabajar provisionalmente en cualquier sector y lugar de España. La resolución favorable concede residencia de 1 año, tras la cual la persona se incorpora a las figuras ordinarias del Reglamento.
+                    </p>
+                    <p className="text-white/80 text-sm leading-relaxed">
+                      Para hijos menores presentes en España: autorización de residencia de 5 años.
+                    </p>
+                  </div>
+                  <p className="text-gold-400 text-sm mb-6 font-medium">
+                    Cada caso tiene particularidades. Analiza tu situación con nosotros antes de presentar la solicitud.
+                  </p>
+                  <div className="pt-4 border-t border-white/10">
+                    <Link to="/contacto">
+                      <Button className="w-full sm:w-auto bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold">
+                        <Calendar className="mr-2 h-4 w-4" />
+                        Consulta tu caso → formulario de contacto
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
 
             {/* DISCLAIMER FINAL */}

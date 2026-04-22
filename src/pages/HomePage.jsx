@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Globe, Shield, Users, Award, FileCheck, GraduationCap, Building2, Quote, CheckCircle, Star, Clock, HeartHandshake, Scale, Calendar } from 'lucide-react';
+import { ArrowRight, Globe, Shield, Users, Award, FileCheck, GraduationCap, Building2, Quote, CheckCircle, Star, Clock, HeartHandshake, Scale, Calendar, Eye } from 'lucide-react';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import EligibilityCalculator from '@/components/EligibilityCalculator';
 import TidyCalModal from '@/components/TidyCalModal';
@@ -49,28 +49,29 @@ const HomePage = () => {
       titulo: 'Acompañamiento personalizado'
     },
     {
-      icon: Clock,
-      titulo: 'Respuesta en 24h'
+      icon: Eye,
+      titulo: 'Transparencia',
+      descripcion: 'Tarifas claras, proceso explicado paso a paso. Sin sorpresas.'
     }
   ];
 
   const testimonios = [
     {
-      nombre: 'María G.',
-      pais: 'Colombia → España',
-      texto: 'Ángela hizo que un proceso que me parecía imposible fuera realidad. Su conocimiento de ambos sistemas legales fue clave.',
+      nombre: 'Mauricio Rodríguez Herrera',
+      pais: 'Homologación de doctorado · México',
+      texto: 'Gracias a su equipo logré la homologación de mi doctorado de México en España con la Universidad Complutense de Madrid de manera satisfactoria, a un precio justo y con un acompañamiento constante en cada paso. No es solo que hagan el trabajo, es que te guían y te dan tranquilidad, que es clave en estos trámites. Totalmente recomendados.',
       estrellas: 5
     },
     {
-      nombre: 'Carlos R.',
-      pais: 'Venezuela → España',
-      texto: 'No solo me ayudó con los papeles, sino que me acompañó emocionalmente en todo el proceso. Un trato humano excepcional.',
+      nombre: 'Stefany Rave',
+      pais: 'Homologación + Nacionalidad · Colombia',
+      texto: 'Contar con Ángela desde el principio me quitó un peso enorme de los hombros. Me ayudó con la homologación de mi título, con el proceso de nacionalidad y, además, me conectó con personas clave para construir una red de apoyo aquí en España. Estoy muy agradecida y la recomiendo con los ojos cerrados.',
       estrellas: 5
     },
     {
-      nombre: 'Ana P.',
-      pais: 'España (reagrupación)',
-      texto: 'La reunificación familiar de mi madre fue un éxito gracias a su paciencia y profesionalidad. Totalmente recomendable.',
+      nombre: 'Juan Esteban Bermúdez',
+      pais: 'Residencia por estudios + Homologación · Colombia',
+      texto: 'Desde el primer contacto recibí un trato muy amable y sincero. Me dieron la confianza para hacer realidad mi objetivo de estudiar y trabajar en España. Siempre tuve apoyo y seguimiento en cada paso. Muy recomendados.',
       estrellas: 5
     }
   ];
@@ -203,9 +204,14 @@ const HomePage = () => {
                     <div className="w-14 h-14 rounded-xl bg-gold/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/30 transition-colors">
                       <Icon className="text-gold" size={28} />
                     </div>
-                    <h3 className="font-poppins text-lg font-semibold text-white">
+                    <h3 className="font-poppins text-lg font-semibold text-white mb-2">
                       {razon.titulo}
                     </h3>
+                    {razon.descripcion && (
+                      <p className="font-lato text-sm text-white/70">
+                        {razon.descripcion}
+                      </p>
+                    )}
                   </motion.div>
                 );
               })}
@@ -357,13 +363,10 @@ const HomePage = () => {
               viewport={{ once: true }}
             >
               <h2 className="font-poppins text-3xl sm:text-4xl font-bold text-white mb-4">
-                ¿Listo para dar el siguiente paso?
+                ¿Lista para comenzar tu proceso?
               </h2>
-              <p className="font-lato text-lg text-white/80 mb-2 max-w-2xl mx-auto">
-                Comenzar proceso - Consulta inicial gratuita
-              </p>
-              <p className="font-lato text-sm text-white/80 mb-8 max-w-2xl mx-auto">
-                Sesión de 30 minutos sin compromiso para evaluar tu caso
+              <p className="font-lato text-lg text-white/80 mb-8 max-w-2xl mx-auto">
+                Agenda una asesoría personalizada. Analizaremos tu caso específico y te informaremos de las tarifas antes de comenzar.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
@@ -371,7 +374,7 @@ const HomePage = () => {
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold hover:bg-gold-dark text-primary-dark font-poppins font-semibold rounded-lg transition-all duration-300 hover:shadow-lg"
                 >
                   <Calendar className="w-5 h-5" />
-                  Agendar consulta
+                  Agenda tu asesoría — 50€
                 </button>
                 <Link
                   to="/contacto"

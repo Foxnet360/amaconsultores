@@ -10,8 +10,8 @@ import { Button } from '@/components/ui/button';
 const valores = [
   {
     icon: Scale,
-    titulo: 'Colegiación Dual',
-    descripcion: 'Equipo con colegiación en España y Colombia, ofreciendo cobertura jurídica completa en ambos sistemas.'
+    titulo: 'Cobertura jurídica dual',
+    descripcion: 'Cobertura jurídica en España y Colombia — consultora especializada con abogados colegiados colaboradores en ambos países.'
   },
   {
     icon: Award,

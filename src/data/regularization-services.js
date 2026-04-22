@@ -45,14 +45,14 @@ export const arraigos = [
     article: 'art. 127.c',
     baseNormativa: 'RD 1155/2024',
     price: '380€ IVA incluido · tasas a cargo del cliente',
-    description: 'Para personas sin contrato con vínculos familiares directos con residentes legales, o que acreditan integración mediante informe de la Comunidad Autónoma.',
+    description: 'Para personas en situación irregular con al menos 2 años de permanencia en España. Se puede acceder mediante contrato de trabajo (mínimo 30h/semana al SMI) o mediante informe de integración de la Comunidad Autónoma.',
     requirements: [
-      'Al menos 2 años en España (ausencias máx. 90 días)',
-      'Familiar en situación regular (cónyuge, pareja registrada, ascendiente o descendiente 1er grado) O informe de integración de la CCAA',
+      'Al menos 2 años en España de forma continuada (ausencias máx. 90 días)',
+      'Contrato de trabajo de mínimo 30h/semana al SMI, O informe de integración de la CCAA',
       'Sin antecedentes penales (últimos 5 años)',
       'No soy ciudadano/a UE, EEE o Suiza',
     ],
-    duration: 'Duración: 1 año renovable a 4. Autoriza a trabajar.',
+    duration: 'Duración: 1 año renovable a 4. Autoriza a trabajar desde el primer día.',
   },
   {
     id: 'arraigo-socioformativo',
@@ -60,7 +60,7 @@ export const arraigos = [
     article: 'art. 127.d',
     baseNormativa: 'RD 1155/2024',
     price: '380€ IVA incluido · tasas a cargo del cliente',
-    description: 'Permite regularizar a quienes estén matriculados, cursando o comprometidos a realizar formación reconocida. Solo puede concederse una vez cada tres años.',
+    description: 'Permite regularizar a quienes estén matriculados, cursando o comprometidos a realizar formación incluida en el Catálogo del SEPE o reconocida por el sistema educativo. Permite trabajar hasta 30h semanales durante la formación. Solo puede concederse una vez cada tres años.',
     requirements: [
       'Al menos 2 años en España de forma continuada (ausencias máx. 90 días)',
       'Matriculado/a, cursando o con plaza solicitada en: secundaria postobligatoria, FP grado medio o superior, certificado de profesionalidad o formación del SEPE',

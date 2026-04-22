@@ -4,7 +4,7 @@
 # CONFIGURACIÓN
 # ============================================
 HOST="amaconsultores"
-REMOTE_BASE="/domains/amaconsultores.eu/public_html"
+REMOTE_BASE="/home/u809577906/domains/amaconsultores.eu/public_html"
 # ============================================
 
 function show_help() {
@@ -16,6 +16,7 @@ function show_help() {
     echo "COMANDOS:"
     echo "  upload <archivo/carpeta>     Subir archivo o carpeta al servidor"
     echo "  upload-all                   Subir todo el proyecto (rsync)"
+    echo "  deploy                       Hacer deploy de dist/ al servidor"
     echo "  delete <archivo>             Borrar archivo en el servidor"
     echo "  delete-dir <carpeta>         Borrar carpeta en el servidor"
     echo "  list [ruta]                  Listar archivos (default: raíz)"
@@ -85,6 +86,27 @@ function upload_all() {
     fi
 }
 
+function deploy() {
+    if [ ! -d "./dist" ]; then
+        echo "❌ Error: No existe la carpeta './dist'. Ejecuta 'npm run build' primero."
+        exit 1
+    fi
+
+    echo "🚀 Haciendo deploy de dist/ → $HOST:$REMOTE_BASE/"
+    echo "⚠️  Esto sobrescribirá archivos en el servidor"
+    read -p "¿Continuar? (s/N): " confirm
+
+    if [[ $confirm == "s" || $confirm == "S" ]]; then
+        rsync -avz --delete \
+            -e ssh \
+            ./dist/ \
+            "$HOST:$REMOTE_BASE/"
+        echo "✅ Deploy completado"
+    else
+        echo "❌ Cancelado"
+    fi
+}
+
 function delete_file() {
     local file="$1"
     echo "🗑️  Borrando archivo: $REMOTE_BASE/$file"
@@ -142,6 +164,9 @@ case "$COMMAND" in
         ;;
     upload-all)
         upload_all
+        ;;
+    deploy)
+        deploy
         ;;
     delete)
         delete_file "$1"
