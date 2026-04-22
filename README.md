@@ -7,6 +7,22 @@
 **Sitio web corporativo profesional** de AMA Consultores - Consultoría especializada en Migraciones Internacionales y Proyectos Sociales para personas, ONGs y entidades en España y Colombia.
 
 > 🌐 **URL en producción:** https://amaconsultores.eu
+> 
+> 🛠️ **Desarrollado por:** [Baconhacks.com](https://baconhacks.com)
+
+---
+
+## 🎯 Propósito
+
+AMA Consultores es una firma de consultoría líder en movilidad internacional entre España y Colombia. Este sitio web tiene como objetivo:
+
+- **Informar** sobre trámites de regularización migratoria, movilidad profesional y convenios internacionales
+- **Captar clientes** mediante formularios de contacto y reserva de asesorías
+- **Demostrar autoridad** con contenido legal detallado, equipo profesional y artículos de blog
+- **Facilitar la conversión** con calculadoras de elegibilidad, checklists descargables y CTAs estratégicos
+- **Cumplir con GDPR** mediante páginas legales completas y gestión de cookies
+
+---
 
 ## 🏗️ Arquitectura
 
@@ -15,38 +31,54 @@
 ```
 ┌─────────────────────────────────────────────┐
 │  #inicio        → Hero + Métricas           │
-│  #regularizacion → 20 acordeones migración │
-│  #movilidad     → Servicios profesionales  │
-│  #convenios     → España-Colombia          │
-│  #colombia      → Servicios en Colombia    │
-│  #entidades     → Empresas y ONGs          │
-│  #equipo        → Quiénes Somos            │
-│  #asesoria      → Reservas TidyCal         │
-│  #contacto      → Formulario dual          │
+│  #regularizacion → Regularización migratoria│
+│  #movilidad     → Servicios profesionales   │
+│  #convenios     → España-Colombia           │
+│  #colombia      → Servicios en Colombia     │
+│  #entidades     → Empresas y ONGs           │
+│  #equipo        → Quiénes Somos             │
+│  #asesoria      → Reservas TidyCal          │
+│  #contacto      → Formulario dual           │
 └─────────────────────────────────────────────┘
 ```
 
-## 🚀 Tecnologías
+**Rutas adicionales:**
+- `/blog` - Blog con Notion CMS
+- `/blog/:slug` - Artículo individual
+- `/politica-de-privacidad` - GDPR
+- `/aviso-legal` - Aviso legal
+- `/politica-de-cookies` - Política de cookies
 
-- **Framework**: React 18 + Vite 4
-- **Routing**: React Router DOM 7 (hash-based para one-page)
-- **Styling**: Tailwind CSS 3.4
-- **UI Components**: shadcn/ui + Radix UI
-- **Animations**: Framer Motion
-- **Icons**: Lucide React
-- **SEO**: React Helmet + JSON-LD + Breadcrumbs
-- **Forms**: React Hook Form
-- **PDF**: @react-pdf/renderer
-- **CMS**: Notion API (Blog)
-- **Accessibility**: WCAG 2.1 AA compliant
+---
+
+## 🚀 Stack Tecnológico
+
+| Categoría | Tecnología | Versión |
+|-----------|-----------|---------|
+| **Framework** | React | 18 |
+| **Build Tool** | Vite | 4 |
+| **Routing** | React Router | 7 (hash-based) |
+| **Styling** | Tailwind CSS | 3.4 |
+| **UI Components** | shadcn/ui + Radix UI | - |
+| **Animations** | Framer Motion | - |
+| **Icons** | Lucide React | - |
+| **Forms** | React Hook Form | - |
+| **PDF Generation** | @react-pdf/renderer | - |
+| **CMS** | Notion API | - |
+| **SEO** | React Helmet + JSON-LD | - |
+| **Analytics** | Google Analytics 4 | - |
+| **Booking** | TidyCal | - |
+| **Reviews** | Elfsight (Google Reviews) | - |
+
+---
 
 ## 📁 Estructura del Proyecto
 
 ```
 src/
 ├── components/
-│   ├── ui/                    # Componentes shadcn/ui
-│   ├── sections/              # Secciones one-page
+│   ├── ui/                    # Componentes shadcn/ui (Button, Card, Accordion...)
+│   ├── sections/              # Secciones del one-page
 │   │   ├── HeroSection.jsx
 │   │   ├── RegularizacionSection.jsx
 │   │   ├── MovilidadSection.jsx
@@ -54,19 +86,30 @@ src/
 │   │   ├── ColombiaSection.jsx
 │   │   ├── EntidadesSection.jsx
 │   │   ├── EquipoSection.jsx
-│   │   ├── ReviewsSection.jsx
 │   │   ├── AsesoriaSection.jsx
 │   │   └── ContactoSection.jsx
+│   ├── forms/                 # Componentes de formularios
+│   ├── legal/                 # Componentes de páginas legales
+│   ├── about/                 # Componentes de sección equipo
+│   ├── services/              # Componentes de servicios
 │   ├── Navigation.jsx         # Navegación sticky
 │   ├── Footer.jsx
 │   ├── CookieConsentBanner.jsx
 │   ├── EligibilityCalculator.jsx
 │   ├── GoogleReviewsWidget.jsx
-│   └── PDFDownloadButton.jsx
+│   ├── PDFDownloadButton.jsx
+│   ├── ArticleCTA.jsx         # CTA dentro de artículos
+│   ├── ArticleNav.jsx         # Navegación entre artículos
+│   ├── ReadingProgress.jsx    # Barra de progreso
+│   ├── ShareButtons.jsx       # Compartir en redes
+│   └── TableOfContents.jsx    # Índice de contenido
 ├── pages/
 │   ├── HomePage.jsx           # One-page principal
 │   ├── BlogPage.jsx
 │   ├── BlogPostPage.jsx
+│   ├── AgendaPage.jsx
+│   ├── PricingPage.jsx
+│   ├── ContactPage.jsx
 │   ├── PoliticaPrivacidadPage.jsx
 │   ├── AvisoLegalPage.jsx
 │   └── PoliticaCookiesPage.jsx
@@ -76,78 +119,40 @@ src/
 │   ├── use-toast.js
 │   └── useAnalytics.js        # GA4 tracking
 ├── lib/
-│   ├── utils.js
-│   └── notion.js              # Notion CMS integration
+│   ├── utils.js               # Utilidades (cn, etc.)
+│   └── notion.js              # Integración Notion CMS
+├── data/
+│   └── team-profiles.js       # Perfiles del equipo
 └── public/
-    └── data/                  # Blog data (JSON)
+    ├── data/                  # Blog data (JSON generado desde Notion)
+    └── team/                  # Fotos del equipo
 ```
 
-## 🗺️ Rutas
+---
 
-| Ruta | Descripción |
-|------|-------------|
-| `/` | One-page principal (9 secciones) |
-| `/#regularizacion` | Regularización migratoria |
-| `/#movilidad` | Movilidad profesional |
-| `/#contacto` | Formulario de contacto |
-| `/blog` | Blog con Notion CMS |
-| `/blog/:slug` | Artículo individual |
-| `/politica-de-privacidad` | GDPR - Privacidad |
-| `/aviso-legal` | Aviso legal |
-| `/politica-de-cookies` | Cookies |
-
-**Legacy redirects:**
-- `/servicios` → `/#regularizacion`
-- `/contacto` → `/#contacto`
-- `/sobre-nosotros` → `/#equipo`
-
-## 🎨 Identidad Visual
-
-### Colores
-- **Navy**: `#0D1B3E` (Primary)
-- **Gold**: `#C9A84C` (Accent)
-- **Gradient**: Navy → Gold en hover states
-
-### Tipografía
-- **Headings**: Raleway Bold
-- **Body**: Playfair Display / Raleway Regular
-- **UI**: Raleway Medium
-
-### Tono
-Profesional pero cercano, humano, empático
-
-## 🔄 Cambios Recientes (v2.1.0)
-
-Ver [CHANGELOG.md](CHANGELOG.md) para detalles completos.
-
-### Mejoras de UX/UI
-- **Coherencia visual**: PricingPage unificada a tema oscuro
-- **Mensajes CTA estandarizados**: Claridad sobre gratuidad vs costos
-- **Índices navegables**: En páginas de servicio (Regularización, Movilidad)
-- **Breadcrumbs**: Añadidos a Precios, Blog y Equipo
-
-### Accesibilidad (WCAG 2.1 AA)
-- Contraste mejorado: `text-white/60` → `text-white/80`
-- Skip-to-content link para navegación por teclado
-- Atributos ARIA en modales y dropdowns
-- Focus trap en TidyCalModal
-
-## 📦 Scripts
+## 📦 Scripts Disponibles
 
 ```bash
 # Desarrollo
-npm run dev              # Servidor en localhost:3000
-
-# Testing
-npm run test:accessibility   # Verificar accesibilidad
-npm run test:links          # Verificar links
-npm run test:performance    # Analizar bundle
+npm run dev                    # Servidor en localhost:3000
 
 # Build
-npm run build            # Construir para producción
-npm run preview          # Vista previa de producción
-npm run lint             # ESLint
+npm run build                  # Build de producción (vite only)
+npm run build:full             # Build completo: Notion fetch → generate-llms → vite build
+npm run preview                # Vista previa de producción en :3000
+
+# Testing y QA
+npm run lint                   # ESLint (modo quiet - solo errores)
+npm run lint:warn              # ESLint con warnings
+npm run test:accessibility     # Verificar accesibilidad
+npm run test:links             # Verificar links rotos
+npm run test:performance       # Analizar bundle size
+
+# CMS
+npm run fetch-notion           # Sincronizar blog desde Notion CMS
 ```
+
+---
 
 ## 🔧 Configuración
 
@@ -180,6 +185,8 @@ VITE_EMAILJS_USER_ID=user_xxx
 | **GA4** | Analytics | ⚠️ Necesita Measurement ID |
 | **EmailJS** | Formularios | ⚠️ Necesita configuración |
 
+---
+
 ## 🎯 Características Principales
 
 ### 1. One-Page Architecture
@@ -187,64 +194,126 @@ VITE_EMAILJS_USER_ID=user_xxx
 - Navegación sticky con detección de sección activa
 - URL hash actualizada automáticamente
 - Mobile-first responsive design
+- Redirects legacy (`/servicios`, `/contacto`, `/sobre-nosotros`)
 
 ### 2. Regularización Migratoria
-- 20 acordeones con contenido legal completo
+- Acordeones con contenido legal completo
 - Sistema de checklists (★ obligatorio / ◆ opcional)
 - Calculadora de elegibilidad interactiva
 - CTAs a reserva de asesoría
+- Descarga de checklist en PDF
 
 ### 3. Blog con Notion CMS
-- Sincronización automática desde Notion
+- Sincronización automática desde Notion (`npm run fetch-notion`)
+- Renderizado avanzado de bloques Notion (texto, imágenes, listas, quotes, bookmarks)
+- Tabla de contenidos automática
+- Barra de progreso de lectura
+- Navegación entre artículos (anterior/siguiente)
+- Botones de compartir en redes sociales
+- CTA contextual en artículos
 - Categorías: Noticias, Guías, Legal, Documentos
 - Búsqueda y filtros
-- SEO optimizado (meta tags, JSON-LD)
+- SEO optimizado (meta tags dinámicos, JSON-LD)
 
-### 4. Cookie Consent GDPR
+### 4. Reservas con TidyCal
+- Widget embebido de calendario
+- Modal de reserva
+- Múltiples tipos de servicio
+
+### 5. Cookie Consent GDPR
 - Banner de consentimiento
 - Opción de rechazar cookies no esenciales
 - GA4 solo carga con consentimiento
 - Expiración de consentimiento (1 año)
 
-### 5. Páginas Legales
+### 6. Páginas Legales
 - Política de Privacidad (GDPR compliant)
 - Aviso Legal
 - Política de Cookies
 - Checkboxes obligatorios en formularios
 
-## 📚 Documentación
+### 7. Accesibilidad (WCAG 2.1 AA)
+- Skip-to-content link
+- Atributos ARIA en modales y dropdowns
+- Focus trap en modales
+- Contraste mejorado
+- Navegación por teclado completa
 
-- **[NOTION_SETUP_GUIDE.md](NOTION_SETUP_GUIDE.md)** - Configuración del Blog
-- **[NOTION_CMS_GUIDE.md](NOTION_CMS_GUIDE.md)** - Guía de uso del CMS
-- **[HOSTINGER_DEPLOY_GUIDE.md](HOSTINGER_DEPLOY_GUIDE.md)** - Deployment
-- **[TESTING_GUIDE.md](TESTING_GUIDE.md)** - Testing y QA
-- **[GOOGLE_REVIEWS_SETUP.md](GOOGLE_REVIEWS_SETUP.md)** - Widget de reseñas
+---
+
+## 🎨 Identidad Visual
+
+### Colores
+- **Navy**: `#0D1B3E` (Primary)
+- **Gold**: `#C9A84C` / `#d4af37` (Accent)
+- **Gradient**: Navy → Gold en hover states
+
+### Tipografía
+- **Headings**: Raleway Bold
+- **Body**: Playfair Display / Raleway Regular
+- **UI**: Raleway Medium
+
+### Tono
+Profesional pero cercano, humano, empático
+
+---
 
 ## 🚀 Deployment
 
-### Local → Hostinger
+### Build Local + Subir a Hostinger
 
 ```bash
-# 1. Build de producción
+# 1. Fetch datos de Notion
+npm run fetch-notion
+
+# 2. Build de producción
 npm run build
 
-# 2. Verificar build
+# 3. Verificar build
 ls -la dist/
 
-# 3. Subir a Hostinger (File Manager o FTP)
+# 4. Subir a Hostinger (File Manager o FTP)
 # - Subir todo el contenido de dist/
 # - Asegurar que dist/data/ esté incluido
 
-# 4. Verificar en producción
+# 5. Verificar en producción
 # https://amaconsultores.eu
 ```
 
 ### Variables de Entorno en Hostinger
 
-Configurar en el panel de Hostinger (Settings → Environment Variables):
+Configurar en el panel de Hostinger:
 - `VITE_NOTION_TOKEN`
 - `VITE_NOTION_DATABASE_ID`
 - `VITE_GA4_MEASUREMENT_ID`
+
+---
+
+## 📚 Documentación
+
+- **[NOTION_SETUP_GUIDE.md](NOTION_SETUP_GUIDE.md)** - Configuración del Blog
+- **[NOTION_CMS_GUIDE.md](NOTION_CMS_GUIDE.md)** - Guía de uso del CMS
+- **[TESTING_GUIDE.md](TESTING_GUIDE.md)** - Testing y QA
+- **[GOOGLE_REVIEWS_SETUP.md](GOOGLE_REVIEWS_SETUP.md)** - Widget de reseñas
+
+---
+
+## 👥 Equipo AMA Consultores
+
+- **Ángela Morales Aristizábal** - Fundadora y CEO
+- **Rafael Reyes Pulido** - Abogado Colegiado
+- **Xiomara Sánchez Arias** - Gestión Documental
+- **Irene Hernández Gálvez** - Asesora Migratoria
+
+---
+
+## 🛠️ Desarrollo
+
+**Desarrollado por:** [Baconhacks.com](https://baconhacks.com)
+
+Este sitio fue diseñado y construido por el equipo de Baconhacks, especialistas en desarrollo web profesional y soluciones digitales para empresas.
+
+---
 
 ## 🔒 Seguridad
 
@@ -253,6 +322,8 @@ Configurar en el panel de Hostinger (Settings → Environment Variables):
 - ✅ No PII en GA4 (IP anonimizado)
 - ✅ CSP headers recomendados
 - ✅ Validación de formularios (cliente y servidor)
+
+---
 
 ## 📊 Performance
 
@@ -267,12 +338,7 @@ Configurar en el panel de Hostinger (Settings → Environment Variables):
 - Font optimization (Google Fonts display=swap)
 - Compression gzip/brotli
 
-## 👥 Equipo
-
-- **Ángela Morales Aristizábal** - Fundadora y CEO
-- **Rafael Reyes Pulido** - Abogado Colegiado
-- **Xiomara Sánchez Arias** - Gestión Documental
-- **Irene Hernández Gálvez** - Asesora Migratoria
+---
 
 ## 📄 Licencia
 
@@ -280,5 +346,6 @@ Configurar en el panel de Hostinger (Settings → Environment Variables):
 
 ---
 
-**Última actualización:** Marzo 2026
-**Versión:** 2.0 (One-Page Architecture)
+**Desarrollado por:** [Baconhacks.com](https://baconhacks.com)  
+**Última actualización:** Abril 2026  
+**Versión:** 2.1
