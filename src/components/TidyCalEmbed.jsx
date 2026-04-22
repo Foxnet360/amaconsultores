@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AlertCircle, Loader2, Calendar } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -15,6 +16,7 @@ const TidyCalEmbed = ({
   height = "800px",
   className = "",
 }) => {
+  const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
@@ -46,7 +48,7 @@ const TidyCalEmbed = ({
             Intentar de nuevo
           </Button>
           <Button
-            onClick={() => window.location.href = '/contacto'}
+            onClick={() => navigate('/contacto')}
             className="bg-gold-500 hover:bg-gold-600 text-navy-900 font-bold"
           >
             Contactar

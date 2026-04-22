@@ -46,6 +46,7 @@ const ContactoSection = () => {
       pais: '',
       situacion: '',
       privacidad: false,
+      condiciones: false,
       comunicaciones: false
     },
     mode: 'onBlur'
@@ -61,6 +62,7 @@ const ContactoSection = () => {
       tipo: '',
       necesidades: '',
       privacidad: false,
+      condiciones: false,
       comunicaciones: false
     },
     mode: 'onBlur'
@@ -71,6 +73,15 @@ const ContactoSection = () => {
       toast({
         title: "Error",
         description: "Debes aceptar la Política de Privacidad",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    if (!data.condiciones) {
+      toast({
+        title: "Error",
+        description: "Debes aceptar las Condiciones del Servicio",
         variant: "destructive"
       });
       return;
@@ -97,7 +108,7 @@ const ContactoSection = () => {
           service: data.pais,
           message: data.situacion,
           comunicaciones: data.comunicaciones ? 'Sí' : 'No',
-          to_email: 'info@amaconsultores.eu'
+          to_email: 'asesorias@amaconsultores.eu'
         };
 
         await emailjs.send(
@@ -141,6 +152,15 @@ const ContactoSection = () => {
       return;
     }
 
+    if (!data.condiciones) {
+      toast({
+        title: "Error",
+        description: "Debes aceptar las Condiciones del Servicio",
+        variant: "destructive"
+      });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -163,7 +183,7 @@ const ContactoSection = () => {
           tipo: data.tipo,
           mensaje: data.necesidades,
           comunicaciones: data.comunicaciones ? 'Sí' : 'No',
-          to_email: 'info@amaconsultores.eu'
+          to_email: 'asesorias@amaconsultores.eu'
         };
 
         await emailjs.send(
@@ -227,14 +247,13 @@ const ContactoSection = () => {
             <div className="bg-gold-50 border border-gold-200 rounded-xl p-6 flex items-start gap-4">
               <AlertCircle className="text-gold-600 shrink-0 mt-0.5" size={24} />
               <div>
-                <p className="text-gold-800 font-semibold mb-1">Respondo en un plazo de 48 horas laborables.</p>
-                <p className="text-gold-700 text-sm">Las consultas tienen coste — al contactar te informaré de las tarifas antes de comenzar.</p>
+                <p className="text-gold-800 font-semibold mb-1">Las consultas tienen coste — al contactar te informaré de las tarifas antes de comenzar.</p>
               </div>
             </div>
 
             <div className="space-y-6">
               <a
-                href="mailto:info@amaconsultores.eu"
+                href="mailto:asesorias@amaconsultores.eu"
                 className="flex items-center gap-4 p-4 bg-slate-50 rounded-xl shadow-md border border-gray-200 hover:shadow-md transition-shadow"
               >
                 <div className="w-12 h-12 bg-gold-500/20 rounded-lg flex items-center justify-center">
@@ -242,7 +261,7 @@ const ContactoSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-gray-500">Email</p>
-                  <p className="font-semibold text-navy">info@amaconsultores.eu</p>
+                  <p className="font-semibold text-navy">asesorias@amaconsultores.eu</p>
                 </div>
               </a>
 
@@ -398,16 +417,41 @@ const ContactoSection = () => {
                             />
                           )}
                         />
-                        <Label htmlFor="privacidad-persona" className="text-sm font-normal">
-                          Acepto la{' '}
-                          <a href="/politica-de-privacidad" className="text-gold-500 hover:underline" target="_blank">
+                        <Label htmlFor="privacidad-persona" className="text-sm font-normal leading-relaxed">
+                          He leído y acepto la{' '}
+                          <a href="/politica-de-privacidad" className="text-gold-500 hover:underline" target="_blank" rel="noopener noreferrer">
                             Política de Privacidad
                           </a>
-                          {' '}*
+                          {' '}y consiento el tratamiento de mis datos personales para la atención de mi consulta. *
                         </Label>
                       </div>
                       {personasForm.formState.errors.privacidad && (
                         <p className="text-red-500 text-sm">Debes aceptar la Política de Privacidad</p>
+                      )}
+
+                      <div className="flex items-start gap-3">
+                        <Controller
+                          name="condiciones"
+                          control={personasForm.control}
+                          rules={{ required: true }}
+                          render={({ field }) => (
+                            <Checkbox
+                              id="condiciones-persona"
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                            />
+                          )}
+                        />
+                        <Label htmlFor="condiciones-persona" className="text-sm font-normal leading-relaxed">
+                          He leído y acepto las{' '}
+                          <a href="/condiciones-servicio" className="text-gold-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                            Condiciones Generales del Servicio
+                          </a>
+                          {' '}de AMA Consultores, incluyendo la política de honorarios, el alcance de la consultoría y la obligación de medios. Entiendo que la contratación del servicio no garantiza una resolución administrativa favorable. *
+                        </Label>
+                      </div>
+                      {personasForm.formState.errors.condiciones && (
+                        <p className="text-red-500 text-sm">Debes aceptar las Condiciones del Servicio</p>
                       )}
 
                       <div className="flex items-start gap-3">
@@ -422,8 +466,8 @@ const ContactoSection = () => {
                             />
                           )}
                         />
-                        <Label htmlFor="comunicaciones-persona" className="text-sm font-normal">
-                          Deseo recibir comunicaciones comerciales sobre servicios y novedades jurídicas
+                        <Label htmlFor="comunicaciones-persona" className="text-sm font-normal leading-relaxed">
+                          Acepto recibir información sobre los servicios y novedades de AMA Consultores por correo electrónico.
                         </Label>
                       </div>
                     </div>
@@ -565,16 +609,41 @@ const ContactoSection = () => {
                             />
                           )}
                         />
-                        <Label htmlFor="privacidad-entidad" className="text-sm font-normal">
-                          Acepto la{' '}
-                          <a href="/politica-de-privacidad" className="text-gold-500 hover:underline" target="_blank">
+                        <Label htmlFor="privacidad-entidad" className="text-sm font-normal leading-relaxed">
+                          He leído y acepto la{' '}
+                          <a href="/politica-de-privacidad" className="text-gold-500 hover:underline" target="_blank" rel="noopener noreferrer">
                             Política de Privacidad
                           </a>
-                          {' '}*
+                          {' '}y consiento el tratamiento de mis datos personales para la atención de mi consulta. *
                         </Label>
                       </div>
                       {entidadesForm.formState.errors.privacidad && (
                         <p className="text-red-500 text-sm">Debes aceptar la Política de Privacidad</p>
+                      )}
+
+                      <div className="flex items-start gap-3">
+                        <Controller
+                          name="condiciones"
+                          control={entidadesForm.control}
+                          rules={{ required: true }}
+                          render={({ field }) => (
+                            <Checkbox
+                              id="condiciones-entidad"
+                              checked={field.value}
+                              onCheckedChange={field.onChange}
+                            />
+                          )}
+                        />
+                        <Label htmlFor="condiciones-entidad" className="text-sm font-normal leading-relaxed">
+                          He leído y acepto las{' '}
+                          <a href="/condiciones-servicio" className="text-gold-500 hover:underline" target="_blank" rel="noopener noreferrer">
+                            Condiciones Generales del Servicio
+                          </a>
+                          {' '}de AMA Consultores, incluyendo la política de honorarios, el alcance de la consultoría y la obligación de medios. Entiendo que la contratación del servicio no garantiza una resolución administrativa favorable. *
+                        </Label>
+                      </div>
+                      {entidadesForm.formState.errors.condiciones && (
+                        <p className="text-red-500 text-sm">Debes aceptar las Condiciones del Servicio</p>
                       )}
 
                       <div className="flex items-start gap-3">
@@ -589,8 +658,8 @@ const ContactoSection = () => {
                             />
                           )}
                         />
-                        <Label htmlFor="comunicaciones-entidad" className="text-sm font-normal">
-                          Deseo recibir comunicaciones comerciales sobre servicios y novedades jurídicas
+                        <Label htmlFor="comunicaciones-entidad" className="text-sm font-normal leading-relaxed">
+                          Acepto recibir información sobre los servicios y novedades de AMA Consultores por correo electrónico.
                         </Label>
                       </div>
                     </div>

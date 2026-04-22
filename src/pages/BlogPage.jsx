@@ -1,12 +1,13 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Calendar, Search, Tag, Home, ChevronRight } from 'lucide-react';
+import { Calendar, Search, Tag, Home, ChevronRight, FileQuestion, MessageCircle } from 'lucide-react';
 import { useBlogPosts } from '@/hooks/useBlogQueries';
 import { BlogCardSkeleton } from '@/components/BlogSkeletons';
 
 const categories = ['Todas', 'Noticias', 'Guías', 'Legal', 'Documentos'];
+const POSTS_PER_PAGE = 9;
 
 // Fallback mock data when Notion is not configured
 const mockPosts = [
@@ -45,6 +46,7 @@ const mockPosts = [
 const BlogPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('Todas');
   const [searchQuery, setSearchQuery] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
   
   // Use React Query for data fetching with caching
   const { data: postsData, isLoading, error } = useBlogPosts();
@@ -59,6 +61,11 @@ const BlogPage = () => {
   
   const usingMockData = !postsData;
 
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategory, searchQuery]);
+
   const filteredPosts = useMemo(() => {
     return posts.filter(post => {
       const matchesCategory = selectedCategory === 'Todas' || post.category === selectedCategory;
@@ -68,6 +75,15 @@ const BlogPage = () => {
     });
   }, [posts, selectedCategory, searchQuery]);
 
+  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+  const paginatedPosts = useMemo(() => {
+    const start = (currentPage - 1) * POSTS_PER_PAGE;
+    return filteredPosts.slice(start, start + POSTS_PER_PAGE);
+  }, [filteredPosts, currentPage]);
+
+  const isLastPage = currentPage === totalPages || totalPages === 0;
+  const showPagination = totalPages > 1;
+
   const formatDate = (dateString) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('es-ES', { 
@@ -75,6 +91,19 @@ const BlogPage = () => {
       month: 'long', 
       day: 'numeric' 
     });
+  };
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const clearFilters = () => {
+    setSelectedCategory('Todas');
+    setSearchQuery('');
   };
 
   return (
@@ -138,7 +167,7 @@ const BlogPage = () => {
                 {categories.map(category => (
                   <button
                     key={category}
-                    onClick={() => setSelectedCategory(category)}
+                    onClick={() => handleCategoryChange(category)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                       selectedCategory === category
                         ? 'bg-gold text-navy'
@@ -157,7 +186,7 @@ const BlogPage = () => {
                   type="text"
                   placeholder="Buscar artículos..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={handleSearchChange}
                   className="pl-10 pr-4 py-2 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold text-white placeholder-white/40 w-full md:w-64"
                   aria-label="Buscar artículos"
                 />
@@ -193,67 +222,133 @@ const BlogPage = () => {
                   <BlogCardSkeleton key={i} />
                 ))}
               </div>
-            ) : filteredPosts.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredPosts.map((post, index) => (
-                  <motion.article
-                    key={post.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-[#1e3a5f]/50 to-[#0f2744]/50 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden hover:border-gold/30 transition-all duration-300"
-                  >
-                    <Link to={`/blog/${post.slug}`}>
-                      {/* Featured Image */}
-                      <div className="h-48 bg-gradient-to-br from-[#1e3a8a] to-[#0f2744] flex items-center justify-center overflow-hidden">
-                        {post.featuredImage ? (
-                          <img
-                            src={post.featuredImage}
-                            alt={post.title}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                            onError={(e) => {
-                              e.target.style.display = 'none';
-                            }}
-                          />
-                        ) : (
-                          <span className="text-white text-opacity-30 text-lg font-semibold">AMA Consultores</span>
-                        )}
-                      </div>
-                      
-                      <div className="p-6">
-                        {/* Category Badge */}
-                        <div className="flex items-center gap-2 mb-3">
-                          <Tag size={16} className="text-gold" />
-                          <span className="text-sm text-gold font-medium">{post.category}</span>
+            ) : paginatedPosts.length > 0 ? (
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {paginatedPosts.map((post, index) => (
+                    <motion.article
+                      key={post.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="bg-gradient-to-br from-[#1e3a5f]/50 to-[#0f2744]/50 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden hover:border-gold/30 transition-all duration-300"
+                    >
+                      <Link to={`/blog/${post.slug}`}>
+                        {/* Featured Image */}
+                        <div className="h-48 bg-gradient-to-br from-[#1e3a8a] to-[#0f2744] flex items-center justify-center overflow-hidden">
+                          {post.featuredImage ? (
+                            <img
+                              src={post.featuredImage}
+                              alt={post.title}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                              onError={(e) => {
+                                e.target.style.display = 'none';
+                              }}
+                            />
+                          ) : (
+                            <span className="text-white text-opacity-30 text-lg font-semibold">AMA Consultores</span>
+                          )}
                         </div>
                         
-                        {/* Title */}
-                        <h2 className="font-poppins text-xl font-bold text-white mb-3 line-clamp-2">
-                          {post.title}
-                        </h2>
-                        
-                        {/* Excerpt */}
-                        <p className="text-white/70 mb-4 line-clamp-3">
-                          {post.excerpt}
-                        </p>
-                        
-                        {/* Date and Author */}
-                        <div className="flex items-center gap-4 text-sm text-white/50">
-                          <div className="flex items-center gap-1">
-                            <Calendar size={14} />
-                            <span>{formatDate(post.publishedDate)}</span>
+                        <div className="p-6">
+                          {/* Category Badge */}
+                          <div className="flex items-center gap-2 mb-3">
+                            <Tag size={16} className="text-gold" />
+                            <span className="text-sm text-gold font-medium">{post.category}</span>
                           </div>
-                          <span>{post.author}</span>
+                          
+                          {/* Title */}
+                          <h2 className="font-poppins text-xl font-bold text-white mb-3 line-clamp-2">
+                            {post.title}
+                          </h2>
+                          
+                          {/* Excerpt */}
+                          <p className="text-white/70 mb-4 line-clamp-3">
+                            {post.excerpt}
+                          </p>
+                          
+                          {/* Date and Author */}
+                          <div className="flex items-center gap-4 text-sm text-white/50">
+                            <div className="flex items-center gap-1">
+                              <Calendar size={14} />
+                              <span>{formatDate(post.publishedDate)}</span>
+                            </div>
+                            <span>{post.author}</span>
+                          </div>
                         </div>
-                      </div>
+                      </Link>
+                    </motion.article>
+                  ))}
+                </div>
+
+                {/* Pagination Controls */}
+                {showPagination && (
+                  <div className="mt-12 flex justify-center items-center gap-2 flex-wrap">
+                    <button
+                      onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                      disabled={currentPage === 1}
+                      className="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                      Anterior
+                    </button>
+                    
+                    {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                      <button
+                        key={page}
+                        onClick={() => setCurrentPage(page)}
+                        className={`w-10 h-10 rounded-lg font-medium transition-colors ${
+                          currentPage === page
+                            ? 'bg-gold text-navy'
+                            : 'bg-white/10 text-white hover:bg-white/20'
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    ))}
+                    
+                    <button
+                      onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                      disabled={currentPage === totalPages}
+                      className="px-4 py-2 rounded-lg bg-white/10 text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    >
+                      Siguiente
+                    </button>
+                  </div>
+                )}
+
+                {/* End-of-list CTA */}
+                {isLastPage && filteredPosts.length > 0 && (
+                  <div className="mt-16 p-8 bg-gradient-to-br from-gold/20 to-gold/5 border border-gold/30 rounded-2xl text-center">
+                    <div className="w-14 h-14 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <MessageCircle className="w-7 h-7 text-gold" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-3">
+                      ¿Necesitas asesoría personalizada?
+                    </h3>
+                    <p className="text-white/70 mb-6 max-w-xl mx-auto">
+                      Nuestro equipo de expertos está listo para ayudarte con tu proceso migratorio.
+                    </p>
+                    <Link
+                      to="/contacto"
+                      className="inline-flex items-center gap-2 px-8 py-3 bg-gold text-navy font-bold rounded-xl hover:bg-gold-600 transition-colors"
+                    >
+                      Solicitar información
                     </Link>
-                  </motion.article>
-                ))}
-              </div>
+                  </div>
+                )}
+              </>
             ) : (
               <div className="text-center py-20">
-                <p className="text-white/50 text-lg">No se encontraron artículos con los filtros seleccionados.</p>
+                <FileQuestion className="w-16 h-16 text-white/30 mx-auto mb-4" />
+                <p className="text-white/70 text-lg mb-2">No encontramos artículos con esos criterios.</p>
+                <p className="text-white/50 text-sm mb-6">Prueba con otra búsqueda o categoría.</p>
+                <button
+                  onClick={clearFilters}
+                  className="px-6 py-2 bg-gold text-navy font-semibold rounded-lg hover:bg-gold-600 transition-colors"
+                >
+                  Limpiar filtros
+                </button>
               </div>
             )}
           </div>

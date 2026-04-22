@@ -72,8 +72,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-xl sm:text-2xl text-gray-200 max-w-2xl leading-relaxed">
-              Consultoría especializada en migraciones España-Colombia. 
-              Para personas de cualquier nacionalidad y empresas.
+              Consultora especializada con red de abogados colegiados colaboradores en España y Colombia.
             </p>
 
             <motion.div
@@ -109,18 +108,6 @@ const HeroSection = () => {
               transition={{ delay: 0.8 }}
               className="flex flex-wrap gap-4 pt-4"
             >
-              <div className="flex items-center gap-2 text-gray-300 text-sm">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span>Colegiados España y Colombia</span>
-              </div>
-              <div className="flex items-center gap-2 text-gray-300 text-sm">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span>+1000 casos gestionados</span>
-              </div>
-              <div className="flex items-center gap-2 text-gray-300 text-sm">
-                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span>Respuesta en 24h</span>
-              </div>
             </motion.div>
           </motion.div>
 

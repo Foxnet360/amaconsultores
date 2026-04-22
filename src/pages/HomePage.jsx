@@ -37,32 +37,20 @@ const HomePage = () => {
     }
   ];
 
-  const valores = [
-    { numero: '10+', label: 'Años de experiencia' },
-    { numero: '1000+', label: 'Casos gestionados' },
-    { numero: '2', label: 'Países de colegiación' }
-  ];
+
 
   const razones = [
     {
       icon: Scale,
-      titulo: 'Especialización real',
-      descripcion: 'Solo trabajamos migraciones España-Colombia. Conocemos cada detalle legal, cultural y práctico de este binomio.'
+      titulo: 'Especialización real'
     },
     {
       icon: HeartHandshake,
-      titulo: 'Acompañamiento personalizado',
-      descripcion: 'Trabajo con pocas personas a la vez para garantizar la calidad del servicio y la cercanía que tu caso necesita.'
-    },
-    {
-      icon: Award,
-      titulo: 'Colegiación dual',
-      descripcion: 'Colegiada tanto en España como en Colombia. Conozco los sistemas legales de ambos países desde dentro.'
+      titulo: 'Acompañamiento personalizado'
     },
     {
       icon: Clock,
-      titulo: 'Respuesta en 24h',
-      descripcion: 'Entiendo la urgencia de los procesos migratorios. Te respondo en máximo 24 horas hábiles.'
+      titulo: 'Respuesta en 24h'
     }
   ];
 
@@ -151,22 +139,7 @@ const HomePage = () => {
                 </div>
               </motion.div>
 
-              {/* Stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="mt-16 grid grid-cols-3 gap-8"
-              >
-                {valores.map((valor, index) => (
-                  <div key={index} className="text-center">
-                    <div className="font-poppins text-3xl sm:text-4xl font-bold text-gold mb-1">
-                      {valor.numero}
-                    </div>
-                    <div className="font-lato text-sm text-white/80">{valor.label}</div>
-                  </div>
-                ))}
-              </motion.div>
+
             </div>
           </div>
         </section>
@@ -184,9 +157,11 @@ const HomePage = () => {
                 "Acompaño procesos migratorios con una mirada integral y empática: porque conozco el sistema por dentro... y también sé lo que se siente desde fuera."
               </blockquote>
               <div className="flex items-center justify-center gap-4">
-                <div className="w-14 h-14 rounded-full bg-gold flex items-center justify-center">
-                  <span className="font-poppins font-bold text-primary-dark text-lg">AM</span>
-                </div>
+                <img
+                  src="/team/angela.jpeg"
+                  alt="Ángela Morales Aristizábal"
+                  className="w-14 h-14 rounded-full object-cover border-2 border-gold"
+                />
                 <div className="text-left">
                   <div className="font-poppins font-semibold text-white">Ángela Morales Aristizábal</div>
                   <div className="font-lato text-sm text-white/70">CEO · AMA Consultores</div>
@@ -213,7 +188,7 @@ const HomePage = () => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {razones.map((razon, index) => {
                 const Icon = razon.icon;
                 return (
@@ -223,17 +198,14 @@ const HomePage = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-[#1e3a5f]/50 to-[#0f2744]/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-gold/30 transition-all duration-300 group"
+                    className="bg-gradient-to-br from-[#1e3a5f]/50 to-[#0f2744]/50 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-gold/30 transition-all duration-300 group text-center"
                   >
-                    <div className="w-14 h-14 rounded-xl bg-gold/20 flex items-center justify-center mb-4 group-hover:bg-gold/30 transition-colors">
+                    <div className="w-14 h-14 rounded-xl bg-gold/20 flex items-center justify-center mx-auto mb-4 group-hover:bg-gold/30 transition-colors">
                       <Icon className="text-gold" size={28} />
                     </div>
-                    <h3 className="font-poppins text-lg font-semibold text-white mb-2">
+                    <h3 className="font-poppins text-lg font-semibold text-white">
                       {razon.titulo}
                     </h3>
-                    <p className="font-lato text-sm text-white/70 leading-relaxed">
-                      {razon.descripcion}
-                    </p>
                   </motion.div>
                 );
               })}

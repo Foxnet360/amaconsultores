@@ -155,7 +155,7 @@ const Navigation = () => {
               onClick={openTidyCalModal}
               className="bg-gold hover:bg-gold-dark text-primary-dark font-poppins font-semibold text-sm px-5 py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg"
             >
-              Agendar consulta gratuita (30 min)
+              Agenda tu asesoría — 50€
             </button>
           </div>
 
@@ -216,7 +216,7 @@ const Navigation = () => {
                 onClick={openTidyCalModal}
                 className="w-full mt-4 bg-gold hover:bg-gold-dark text-primary-dark font-poppins font-semibold py-3 rounded-lg transition-colors"
               >
-                Agendar consulta gratuita (30 min)
+                Agenda tu asesoría — 50€
               </button>
             </div>
           </motion.div>

@@ -1,15 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import PDFDownloadButton from '@/components/PDFDownloadButton';
-import { Globe, ClipboardCheck, Building2, TrendingUp, Shield, CheckCircle } from 'lucide-react';
+import { Globe, ClipboardCheck, Building2 } from 'lucide-react';
 
 const EntidadesSection = () => {
+  const navigate = useNavigate();
   const scrollToContacto = () => {
-    // Navigate to contact form with entity mode parameter
-    window.location.href = '/#contacto?mode=entidades';
+    navigate('/contacto?mode=entidades');
   };
 
   const features = [
@@ -33,72 +34,77 @@ const EntidadesSection = () => {
   const servicios = [
     {
       id: 'contratacion',
-      title: 'Contratación Internacional desde Colombia — Gestión Integral',
-      badge: 'Ley 14/2013 · RD 1155/2024 · Arts. 71 y ss. LOEx · Catálogo SEPE',
-      content: 'Servicio integral de selección y contratación de talento colombiano para empresas españolas. Incluye: preselección en origen, entrevistas, verificación de documentación, tramitación de visados y residencias, y acompañamiento post-llegada.',
-      fases: [
-        'Diagnóstico: Análisis de necesidades y perfil requerido',
-        'Selección: Preselección en Colombia y entrevistas finales',
-        'Tramitación: Gestión completa de documentación migratoria',
-        'Incorporación: Acompañamiento en la llegada e integración'
+      title: 'Bloque 1 — Contratación Internacional desde Colombia',
+      badge: 'LOEx art. 36 y ss. · RD 1155/2024 arts. 37-64 · Catálogo SEPE',
+      content: 'Contrata en Colombia. Nosotros gestionamos todo. Desde la búsqueda del perfil hasta el primer día de trabajo en España. Un solo interlocutor para todo el proceso. Contamos con red estable en Colombia para identificar y preseleccionar candidatos cualificados.',
+      items: [
+        'Diagnóstico: análisis del puesto, verificación en el Catálogo SEPE, evaluación de requisitos migratorios y laborales',
+        'Búsqueda y selección en Colombia: identificación de perfiles, verificación de titulaciones y experiencia',
+        'Tramitación: autorización ante SEPE y Extranjería + visado en el Consulado español en Colombia',
+        'Acompañamiento en destino: recepción en España, TIE, NIE y trámites de incorporación'
       ],
-      perfiles: ['Personal de hogar', 'Empleados de construcción', 'Personal de hostelería', 'Cuidadores', 'Otros sectores con escasez']
+      precios: [
+        'Precio empresa: presupuesto personalizado. El trabajador NUNCA paga por ser seleccionado.',
+        'Precio trabajador en destino (TIE y trámites): 500€ IVA incluido'
+      ],
+      cta: '¿Necesitas incorporar talento colombiano? Cuéntanos tu caso — te enviamos propuesta'
     },
     {
       id: 'porque-colombia',
-      title: '¿Por qué contratar talento colombiano?',
-      content: 'Colombia ofrece ventajas únicas para la contratación internacional: Convenio de Doble Nacionalidad que facilita la integración, equipo de AMA en origen que garantiza selección de calidad, adaptación cultural al idioma español, y experiencia contrastada en gestión de movilidad España-Colombia.',
-      ventajas: [
-        'Idioma español: Sin barrera idiomática',
-        'Doble nacionalidad: Facilita la integración y permanencia',
-        'Equipo en origen: Preselección de calidad en Colombia',
-        'Experiencia: Más de 10 años en movilidad entre ambos países'
-      ]
+      title: 'Bloque 2 — ¿Por qué contratar talento colombiano?',
+      content: 'Colombia tiene una de las poblaciones más formadas de América Latina, con profesionales cualificados en sectores donde España acredita escasez real incluidos en el Catálogo SEPE.',
+      items: [
+        'Sanidad: médicos, enfermeros, fisioterapeutas, auxiliares de clínica',
+        'Construcción y obra civil: topógrafos, aparejadores, técnicos de obra',
+        'Agricultura y ganadería: técnicos agrícolas, operarios especializados',
+        'Hostelería: cocineros, jefes de sala, personal especializado',
+        'Logística y transporte: conductores de larga distancia, operadores de maquinaria'
+      ],
+      cta: '¿Tu sector está en la lista? Cuéntanos tu caso — te enviamos propuesta'
     },
     {
       id: 'costes',
-      title: '¿Cuánto cuesta y quién paga qué?',
-      content: 'Nuestra tarifa es transparente y competitiva. El pago se realiza por fases según avance del proceso, y las tasas oficiales son siempre a cargo de la empresa contratante.',
-      tabla: [
-        { servicio: 'Selección completa (4 fases)', precio: 'Desde 1.800 €' },
-        { servicio: 'Gestión trabajador (individual)', precio: '500 €' },
-        { servicio: 'Consulta diagnóstico inicial', precio: '300 €' },
-        { servicio: 'Tasas oficiales (visados, etc.)', precio: 'A cargo de la empresa' }
-      ]
+      title: 'Bloque 3 — ¿Cuánto cuesta y quién paga qué?',
+      content: 'La empresa paga: gestión integral del proceso (presupuesto personalizado) + tasas oficiales ante SEPE y Extranjería. El trabajador NUNCA paga por ser seleccionado. El trabajador paga una vez en España: tramitación de la TIE y trámites de incorporación → 500€ IVA incluido.',
+      cta: '¿Quieres saber el coste para tu empresa? Cuéntanos tu caso — te enviamos propuesta'
     },
     {
       id: 'legalidad',
-      title: '¿Es legal? ¿Qué garantías tiene el proceso?',
-      content: 'El proceso es completamente legal. AMA Consultores opera como consultora jurídica (CNAE 7499). La empresa contrata directamente al trabajador, siendo AMA el intermediario en la gestión documental y migratoria. Todas las contrataciones se realizan bajo la normativa vigente: Ley 14/2013, RD 1155/2024, Arts. 71 y ss. LOEx, y Catálogo de ocupaciones difíciles de cubrir del SEPE.',
-      garantias: [
-        'Transparencia total en costes y procesos',
-        'Cumplimiento estricto de la normativa vigente',
-        'Contrato directo entre empresa y trabajador',
-        'Seguimiento post-incorporación',
-        'Responsabilidad civil profesional'
-      ]
+      title: 'Bloque 4 — ¿Es legal? ¿Qué garantías tiene el proceso?',
+      content: 'Sí, completamente. El proceso está regulado por la LOEx y el RD 1155/2024. Es el cauce ordinario para la contratación de trabajadores extranjeros.',
+      items: [
+        'El trabajador llega con autorización de residencia y trabajo válida en toda España',
+        'El proceso pasa por organismos oficiales: SEPE, Oficina de Extranjería y Consulado español en Colombia',
+        'AMA Consultores acompaña el proceso de principio a fin con pleno conocimiento de ambos sistemas'
+      ],
+      cta: '¿Tienes dudas sobre la viabilidad legal? Cuéntanos tu caso — te enviamos propuesta'
     },
     {
       id: 'proyectos-europeos',
-      title: 'Proyectos con Financiación Pública y Europea',
-      content: 'Experiencia sólida en gestión de proyectos europeos y públicos. La fundadora, Ángela Morales, cuenta con más de 10 años de experiencia gestionando proyectos hasta 2M€ con fondos FAMI, FSE+ y organizaciones internacionales como Save the Children.',
-      experiencia: [
-        'Save the Children España: Programa IMPULSA-CPI (+2M€)',
-        'Fondos FAMI y FSE+: Gestión y justificación',
-        'Proyecto "Formar para Cuidar" Colombia: Cooperación MAEC/UE',
-        'Alianzas con ONGs y entidades públicas'
-      ]
+      title: 'Bloque 5 — Proyectos con Financiación Pública y Europea',
+      content: 'Más de 10 años gestionando proyectos sociales hasta 2M€. Desde la formulación hasta la justificación final.',
+      items: [
+        'FAMI (Fondo de Asilo, Migración e Integración)',
+        'FSE+ (Fondo Social Europeo Plus)',
+        'Next Generation EU',
+        'AECID y Ministerio de Cooperación Internacional',
+        'IRPF 0,7% nacional y autonómico',
+        'Fondos privados: CPI, fundaciones empresariales y convocatorias de RSC'
+      ],
+      footer: 'Servicios: identificación de convocatorias · formulación técnica · presupuesto · seguimiento · justificación · informes y memorias',
+      cta: 'Solicitar información — formulario de contacto'
     },
     {
       id: 'tercer-sector',
-      title: 'Consultoría para el Tercer Sector',
-      content: 'Apoyo especializado a ONGs y entidades sociales que trabajan con población migrante. Diseñamos protocolos de atención, formamos equipos técnicos, y facilitamos alianzas estratégicas entre entidades colombianas y españolas para proyectos de cooperación.',
-      servicios: [
-        'Diseño de protocolos de atención a personas en situación de vulnerabilidad',
-        'Formación técnica en derecho migratorio y protección internacional',
-        'Facilitación de alianzas España-Colombia',
-        'Apoyo en formulación de proyectos europeos'
-      ]
+      title: 'Bloque 6 — Consultoría para el Tercer Sector',
+      content: 'Apoyo estratégico a organizaciones que trabajan con población migrante o en situación de vulnerabilidad.',
+      items: [
+        'Diagnóstico organizacional en materia de atención a población migrante',
+        'Diseño de programas de intervención social basados en evidencia',
+        'Formación de equipos en normativa migratoria y derechos de las personas migrantes',
+        'Consultoría estratégica: planificación, alianzas y posicionamiento institucional'
+      ],
+      cta: 'Solicitar información — formulario de contacto'
     }
   ];
 
@@ -113,6 +119,26 @@ const EntidadesSection = () => {
           className="text-center mb-12"
         >
           <PDFDownloadButton />
+        </motion.div>
+
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Para empresas, ONGs y entidades públicas
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
+            Soluciones especializadas para organizaciones que trabajan con población migrante, que necesitan incorporar talento internacional, o que gestionan proyectos sociales y europeos.
+          </p>
+          <div className="inline-block bg-navy-800 border border-gold-500/30 rounded-lg px-4 py-2">
+            <p className="text-sm text-gray-300">
+              La contratación de talento colombiano en España no es solo un proceso administrativo — es migración regular, ordenada y segura. En AMA Consultores creemos que la cooperación bilateral entre España y Colombia es la herramienta más efectiva para que las personas migren con derechos, las empresas encuentren el talento que necesitan y los países se beneficien mutuamente. Trabajamos desde ese convencimiento.
+            </p>
+          </div>
         </motion.div>
 
         {/* Features Grid */}
@@ -138,6 +164,13 @@ const EntidadesSection = () => {
           })}
         </div>
 
+        {/* Note */}
+        <div className="max-w-4xl mx-auto mb-8">
+          <div className="bg-navy-900/60 border border-white/10 rounded-lg p-4 text-center">
+            <p className="text-white/90 text-sm">Esta sección NO tiene precio fijo. Los CTAs llevan al formulario de contacto.</p>
+          </div>
+        </div>
+
         {/* Services Accordions */}
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
@@ -158,98 +191,39 @@ const EntidadesSection = () => {
                       <h3 className="font-poppins font-semibold text-lg">{servicio.title}</h3>
                     </div>
                   </AccordionTrigger>
-                  
+
                   <AccordionContent className="px-6 pb-6 text-white/90">
                     <div className="space-y-6">
-                      <p>{servicio.content}</p>
-                      
-                      {servicio.fases && (
-                        <div>
-                          <h4 className="font-poppins font-semibold text-gold mb-3">Las 4 fases del proceso:</h4>
-                          <ul className="space-y-2">
-                            {servicio.fases.map((fase, idx) => (
-                              <li key={idx} className="flex items-start gap-2">
-                                <span className="text-gold font-bold">{idx + 1}.</span>
-                                {fase}
-                              </li>
-                            ))}
-                          </ul>
-                          <div className="mt-4">
-                            <p className="text-sm text-white/80">Perfiles habituales: {servicio.perfiles.join(', ')}</p>
-                          </div>
-                        </div>
-                      )}
-                      
-                      {servicio.ventajas && (
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          {servicio.ventajas.map((ventaja, idx) => (
-                            <div key={idx} className="flex items-center gap-2">
-                              <CheckCircle className="text-gold shrink-0" size={18} />
-                              <span className="text-sm">{ventaja}</span>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                      
-                      {servicio.tabla && (
-                        <div className="overflow-x-auto">
-                          <table className="w-full text-sm">
-                            <thead>
-                              <tr className="border-b border-white/20">
-                                <th className="text-left py-2">Servicio</th>
-                                <th className="text-right py-2">Precio</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {servicio.tabla.map((row, idx) => (
-                                <tr key={idx} className="border-b border-white/10">
-                                  <td className="py-2">{row.servicio}</td>
-                                  <td className="text-right py-2 font-semibold text-gold">{row.precio}</td>
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        </div>
-                      )}
-                      
-                      {servicio.garantias && (
+                      <p className="text-white/80">{servicio.content}</p>
+
+                      {servicio.items && servicio.items.length > 0 && (
                         <ul className="space-y-2">
-                          {servicio.garantias.map((garantia, idx) => (
-                            <li key={idx} className="flex items-center gap-2">
-                              <Shield className="text-gold shrink-0" size={18} />
-                              {garantia}
+                          {servicio.items.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-2">
+                              <span className="text-gold mt-1">★</span>
+                              <span>{item}</span>
                             </li>
                           ))}
                         </ul>
                       )}
-                      
-                      {servicio.experiencia && (
-                        <ul className="space-y-2">
-                          {servicio.experiencia.map((exp, idx) => (
-                            <li key={idx} className="flex items-center gap-2">
-                              <TrendingUp className="text-gold shrink-0" size={18} />
-                              {exp}
-                            </li>
+
+                      {servicio.precios && servicio.precios.length > 0 && (
+                        <div className="bg-navy-900/40 border border-white/10 rounded-lg p-4">
+                          {servicio.precios.map((p, idx) => (
+                            <p key={idx} className="text-white/90 text-sm">{p}</p>
                           ))}
-                        </ul>
+                        </div>
                       )}
-                      
-                      {servicio.servicios && (
-                        <ul className="space-y-2">
-                          {servicio.servicios.map((srv, idx) => (
-                            <li key={idx} className="flex items-center gap-2">
-                              <CheckCircle className="text-gold shrink-0" size={18} />
-                              {srv}
-                            </li>
-                          ))}
-                        </ul>
+
+                      {servicio.footer && (
+                        <p className="text-white/80 text-sm">{servicio.footer}</p>
                       )}
-                      
-                      <Button 
+
+                      <Button
                         onClick={scrollToContacto}
                         className="bg-gold hover:bg-gold-dark text-navy font-semibold"
                       >
-                        Solicitar información/propuesta
+                        {servicio.cta}
                       </Button>
                     </div>
                   </AccordionContent>

@@ -1,23 +1,23 @@
 [
   {
     "id": "333a7a19-928e-8043-aa89-ffd99bfbde84",
-    "title": "Articulo de Prueba",
-    "slug": "articulo-prueba",
-    "excerpt": "Este es un articulo de prueba",
-    "category": "Noticias",
+    "title": "Regularización extraordinaria 2026",
+    "slug": "regularizacion-extraordinaria-2026",
+    "excerpt": "¿Por qué resulta más fácil regularizar a alguien que ya llegó que construir canales ordenados que eviten esa situación? Una reflexión sobre la norma que acaba de cambiar miles de vidas.",
+    "category": "Opinion",
     "publishedDate": "2026-03-30",
     "author": "Angela Morales",
     "featuredImage": null,
     "content": [
       {
         "object": "block",
-        "id": "87bb88ba-936e-4161-9bf7-36e848626243",
+        "id": "349a7a19-928e-80bf-b0a0-f67135d1260a",
         "parent": {
           "type": "page_id",
           "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
         },
-        "created_time": "2026-03-30T17:10:00.000Z",
-        "last_edited_time": "2026-03-30T17:10:00.000Z",
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
         "created_by": {
           "object": "user",
           "id": "333d872b-594c-814f-9a80-0002e3073207"
@@ -34,18 +34,18 @@
             {
               "type": "text",
               "text": {
-                "content": "Artículo de prueba",
+                "content": "INVISIBLES",
                 "link": null
               },
               "annotations": {
-                "bold": false,
+                "bold": true,
                 "italic": false,
                 "strikethrough": false,
                 "underline": false,
                 "code": false,
                 "color": "default"
               },
-              "plain_text": "Artículo de prueba",
+              "plain_text": "INVISIBLES",
               "href": null
             }
           ],
@@ -56,13 +56,13 @@
       },
       {
         "object": "block",
-        "id": "e92b80dd-8b5d-4419-848e-4546f722cc3f",
+        "id": "349a7a19-928e-808b-947a-d7c7d4b3dab9",
         "parent": {
           "type": "page_id",
           "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
         },
-        "created_time": "2026-03-30T17:10:00.000Z",
-        "last_edited_time": "2026-03-30T17:10:00.000Z",
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
         "created_by": {
           "object": "user",
           "id": "333d872b-594c-814f-9a80-0002e3073207"
@@ -79,18 +79,18 @@
             {
               "type": "text",
               "text": {
-                "content": "Este es un artículo de ejemplo para validar el formato y el contenido.",
+                "content": "Blog de opinión · Abril 2026 · Migración y Derechos Humanos · 3 min de lectura",
                 "link": null
               },
               "annotations": {
                 "bold": false,
-                "italic": false,
+                "italic": true,
                 "strikethrough": false,
                 "underline": false,
                 "code": false,
                 "color": "default"
               },
-              "plain_text": "Este es un artículo de ejemplo para validar el formato y el contenido.",
+              "plain_text": "Blog de opinión · Abril 2026 · Migración y Derechos Humanos · 3 min de lectura",
               "href": null
             }
           ],
@@ -101,58 +101,13 @@
       },
       {
         "object": "block",
-        "id": "4cacb24f-df2f-4c50-8aa2-7f5b31f24771",
+        "id": "349a7a19-928e-8027-bb3f-f84cf9c247aa",
         "parent": {
           "type": "page_id",
           "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
         },
-        "created_time": "2026-03-30T17:10:00.000Z",
-        "last_edited_time": "2026-03-30T17:10:00.000Z",
-        "created_by": {
-          "object": "user",
-          "id": "333d872b-594c-814f-9a80-0002e3073207"
-        },
-        "last_edited_by": {
-          "object": "user",
-          "id": "333d872b-594c-814f-9a80-0002e3073207"
-        },
-        "has_children": false,
-        "in_trash": false,
-        "type": "heading_3",
-        "heading_3": {
-          "rich_text": [
-            {
-              "type": "text",
-              "text": {
-                "content": "Introducción",
-                "link": null
-              },
-              "annotations": {
-                "bold": false,
-                "italic": false,
-                "strikethrough": false,
-                "underline": false,
-                "code": false,
-                "color": "default"
-              },
-              "plain_text": "Introducción",
-              "href": null
-            }
-          ],
-          "is_toggleable": false,
-          "color": "default"
-        },
-        "archived": false
-      },
-      {
-        "object": "block",
-        "id": "0df5dabd-cc19-4836-a35c-46ba2f15e979",
-        "parent": {
-          "type": "page_id",
-          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
-        },
-        "created_time": "2026-03-30T17:10:00.000Z",
-        "last_edited_time": "2026-03-30T17:10:00.000Z",
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
         "created_by": {
           "object": "user",
           "id": "333d872b-594c-814f-9a80-0002e3073207"
@@ -169,18 +124,18 @@
             {
               "type": "text",
               "text": {
-                "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "content": "Por Ángela Morales Aristizábal",
                 "link": null
               },
               "annotations": {
                 "bold": false,
-                "italic": false,
+                "italic": true,
                 "strikethrough": false,
                 "underline": false,
                 "code": false,
                 "color": "default"
               },
-              "plain_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "plain_text": "Por Ángela Morales Aristizábal",
               "href": null
             }
           ],
@@ -191,13 +146,13 @@
       },
       {
         "object": "block",
-        "id": "843ed94c-d7be-420b-8f8c-d4c0aa924251",
+        "id": "349a7a19-928e-8055-b30a-db2508999488",
         "parent": {
           "type": "page_id",
           "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
         },
-        "created_time": "2026-03-30T17:10:00.000Z",
-        "last_edited_time": "2026-03-30T17:10:00.000Z",
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
         "created_by": {
           "object": "user",
           "id": "333d872b-594c-814f-9a80-0002e3073207"
@@ -208,24 +163,24 @@
         },
         "has_children": false,
         "in_trash": false,
-        "type": "heading_3",
-        "heading_3": {
+        "type": "heading_2",
+        "heading_2": {
           "rich_text": [
             {
               "type": "text",
               "text": {
-                "content": "Desarrollo",
+                "content": "La cooperación como respuesta",
                 "link": null
               },
               "annotations": {
-                "bold": false,
+                "bold": true,
                 "italic": false,
                 "strikethrough": false,
                 "underline": false,
                 "code": false,
                 "color": "default"
               },
-              "plain_text": "Desarrollo",
+              "plain_text": "La cooperación como respuesta",
               "href": null
             }
           ],
@@ -236,13 +191,13 @@
       },
       {
         "object": "block",
-        "id": "d4c5a2f7-25f8-4afd-b791-6d44d3277a47",
+        "id": "349a7a19-928e-8085-a9ba-f2b134500b9d",
         "parent": {
           "type": "page_id",
           "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
         },
-        "created_time": "2026-03-30T17:10:00.000Z",
-        "last_edited_time": "2026-03-30T17:10:00.000Z",
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
         "created_by": {
           "object": "user",
           "id": "333d872b-594c-814f-9a80-0002e3073207"
@@ -259,7 +214,7 @@
             {
               "type": "text",
               "text": {
-                "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                "content": "Llevo años haciéndome la misma pregunta: ¿por qué es más fácil regularizar a alguien que ya está aquí en situación irregular que construir los canales para que pueda llegar con una autorización de residencia desde el principio? No es una pregunta retórica. Es el nudo que está en el centro de mi investigación, y también en el centro de muchas vidas que siguen esperando una respuesta.",
                 "link": null
               },
               "annotations": {
@@ -270,7 +225,7 @@
                 "code": false,
                 "color": "default"
               },
-              "plain_text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+              "plain_text": "Llevo años haciéndome la misma pregunta: ¿por qué es más fácil regularizar a alguien que ya está aquí en situación irregular que construir los canales para que pueda llegar con una autorización de residencia desde el principio? No es una pregunta retórica. Es el nudo que está en el centro de mi investigación, y también en el centro de muchas vidas que siguen esperando una respuesta.",
               "href": null
             }
           ],
@@ -281,58 +236,13 @@
       },
       {
         "object": "block",
-        "id": "333a7a19-928e-80e7-8b76-dff1e81964a7",
+        "id": "349a7a19-928e-8075-a159-ea2298829067",
         "parent": {
           "type": "page_id",
           "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
         },
-        "created_time": "2026-03-30T17:10:00.000Z",
-        "last_edited_time": "2026-03-30T17:10:00.000Z",
-        "created_by": {
-          "object": "user",
-          "id": "333d872b-594c-814f-9a80-0002e3073207"
-        },
-        "last_edited_by": {
-          "object": "user",
-          "id": "333d872b-594c-814f-9a80-0002e3073207"
-        },
-        "has_children": false,
-        "in_trash": false,
-        "type": "heading_3",
-        "heading_3": {
-          "rich_text": [
-            {
-              "type": "text",
-              "text": {
-                "content": "Conclusión",
-                "link": null
-              },
-              "annotations": {
-                "bold": false,
-                "italic": false,
-                "strikethrough": false,
-                "underline": false,
-                "code": false,
-                "color": "default"
-              },
-              "plain_text": "Conclusión",
-              "href": null
-            }
-          ],
-          "is_toggleable": false,
-          "color": "default"
-        },
-        "archived": false
-      },
-      {
-        "object": "block",
-        "id": "333a7a19-928e-8030-b4f3-c1d60071f8a0",
-        "parent": {
-          "type": "page_id",
-          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
-        },
-        "created_time": "2026-03-30T17:08:00.000Z",
-        "last_edited_time": "2026-03-30T17:10:00.000Z",
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
         "created_by": {
           "object": "user",
           "id": "333d872b-594c-814f-9a80-0002e3073207"
@@ -349,7 +259,7 @@
             {
               "type": "text",
               "text": {
-                "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "content": "La respuesta corta: voluntad política que no termina de llegar, trámites bilaterales que se atoran, desconfianza entre instituciones que deberían colaborar. La respuesta larga es lo que sigo investigando. Y el marco de la cooperación internacional es, todavía, una oportunidad que no hemos sabido aprovechar del todo.",
                 "link": null
               },
               "annotations": {
@@ -360,26 +270,715 @@
                 "code": false,
                 "color": "default"
               },
-              "plain_text": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "plain_text": "La respuesta corta: voluntad política que no termina de llegar, trámites bilaterales que se atoran, desconfianza entre instituciones que deberían colaborar. La respuesta larga es lo que sigo investigando. Y el marco de la cooperación internacional es, todavía, una oportunidad que no hemos sabido aprovechar del todo.",
               "href": null
             }
           ],
           "icon": null,
           "color": "default"
         },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-8099-87de-fbb6feae6bcb",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "La regularización extraordinaria de 2026 es, en ese sentido, una respuesta honesta a un problema acumulado. No es la solución estructural que el sistema necesita. Pero es justa, y llega tarde para demasiadas personas que llevan años construyendo una vida aquí sin que el sistema las vea.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "La regularización extraordinaria de 2026 es, en ese sentido, una respuesta honesta a un problema acumulado. No es la solución estructural que el sistema necesita. Pero es justa, y llega tarde para demasiadas personas que llevan años construyendo una vida aquí sin que el sistema las vea.",
+              "href": null
+            }
+          ],
+          "icon": null,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-8089-b73c-d37bfe77e7ee",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "divider",
+        "divider": {},
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-807f-915b-d14b4d104823",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "El vínculo con el Pacto Mundial",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "El vínculo con el Pacto Mundial",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-8099-a456-f711990d9ec8",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "El propio Real Decreto cita en su exposición de motivos el Pacto Mundial para la Migración Segura, Ordenada y Regular de 2018. No es un detalle menor. El objetivo 5 exige vías de migración regular más accesibles y flexibles. El objetivo 8 habla de proteger la vida de las personas y coordinar la respuesta internacional. Esta regularización es una traducción normativa concreta de esos compromisos, y eso importa: no es solo una medida de gracia, es el cumplimiento de una obligación asumida.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "El propio Real Decreto cita en su exposición de motivos el Pacto Mundial para la Migración Segura, Ordenada y Regular de 2018. No es un detalle menor. El objetivo 5 exige vías de migración regular más accesibles y flexibles. El objetivo 8 habla de proteger la vida de las personas y coordinar la respuesta internacional. Esta regularización es una traducción normativa concreta de esos compromisos, y eso importa: no es solo una medida de gracia, es el cumplimiento de una obligación asumida.",
+              "href": null
+            }
+          ],
+          "icon": null,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-8099-abc2-ce8f34d2003a",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:29:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Lo que sigo estudiando sigue en pie: actuar sobre personas que ya están aquí es necesario, pero no suficiente. La cooperación bilateral —acuerdos de contratación en origen que funcionen, procesos transparentes y dignos antes de que las personas emprendan el viaje— es la respuesta estructural que el sistema todavía no ha sabido construir. Mientras eso no cambie, seguiremos necesitando regularizaciones extraordinarias.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Lo que sigo estudiando sigue en pie: actuar sobre personas que ya están aquí es necesario, pero no suficiente. La cooperación bilateral —acuerdos de contratación en origen que funcionen, procesos transparentes y dignos antes de que las personas emprendan el viaje— es la respuesta estructural que el sistema todavía no ha sabido construir. Mientras eso no cambie, seguiremos necesitando regularizaciones extraordinarias.",
+              "href": null
+            }
+          ],
+          "icon": null,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-804e-a58b-f8ec72564ec3",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "divider",
+        "divider": {},
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-80b4-be3b-d3f06967d3b3",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:31:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Una norma que viene de la calle",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Una norma que viene de la calle",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-8080-ab1d-fbcec35b52cc",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "El Real Decreto 316/2026 no surgió de un despacho ministerial. Surgió de más de 700.000 firmas. De personas que dijeron basta a la invisibilidad.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "El Real Decreto 316/2026 no surgió de un despacho ministerial. Surgió de más de 700.000 firmas. De personas que dijeron basta a la invisibilidad.",
+              "href": null
+            }
+          ],
+          "icon": null,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-8009-ae40-c58b1fd85374",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "La norma abre dos vías. La primera es para quienes solicitaron protección internacional en España antes del 1 de enero de 2026 y llevan meses esperando una resolución que no llega. La segunda —y la más amplia— es para cualquier persona que estaba en España antes de esa fecha y puede acreditar una presencia continuada de al menos cinco meses, sin interrupciones.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "La norma abre dos vías. La primera es para quienes solicitaron protección internacional en España antes del 1 de enero de 2026 y llevan meses esperando una resolución que no llega. La segunda —y la más amplia— es para cualquier persona que estaba en España antes de esa fecha y puede acreditar una presencia continuada de al menos cinco meses, sin interrupciones.",
+              "href": null
+            }
+          ],
+          "icon": null,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-8010-93cf-c9a8bc023d6a",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Pero no basta con el tiempo. También hay que demostrar un vínculo real con el país. Y aquí la norma es generosa: vale haber trabajado, aunque fuera sin contrato formal; vale tener una oferta de empleo o la intención de trabajar por cuenta propia; vale convivir con hijos menores, con padres, con hijos mayores que dependen de ti. Y si ninguna de esas situaciones aplica, existe una tercera vía: la vulnerabilidad. Cuando la situación irregular impide el acceso a derechos básicos —vivienda, salud, empleo— eso también cuenta, y lo pueden certificar una entidad social o los servicios sociales del ayuntamiento.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Pero no basta con el tiempo. También hay que demostrar un vínculo real con el país. Y aquí la norma es generosa: vale haber trabajado, aunque fuera sin contrato formal; vale tener una oferta de empleo o la intención de trabajar por cuenta propia; vale convivir con hijos menores, con padres, con hijos mayores que dependen de ti. Y si ninguna de esas situaciones aplica, existe una tercera vía: la vulnerabilidad. Cuando la situación irregular impide el acceso a derechos básicos —vivienda, salud, empleo— eso también cuenta, y lo pueden certificar una entidad social o los servicios sociales del ayuntamiento.",
+              "href": null
+            }
+          ],
+          "icon": null,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-80a6-b39d-e58a742e580b",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "divider",
+        "divider": {},
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-805c-b9ad-d5e32450b9a2",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:27:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Lo que esta norma no resuelve",
+                "link": null
+              },
+              "annotations": {
+                "bold": true,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Lo que esta norma no resuelve",
+              "href": null
+            }
+          ],
+          "is_toggleable": false,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-800e-ada0-f26cf87e5133",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Esta norma me alegra. Y me pesa al mismo tiempo.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Esta norma me alegra. Y me pesa al mismo tiempo.",
+              "href": null
+            }
+          ],
+          "icon": null,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-8041-abb6-d5cefcd2afec",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:30:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Me alegra porque detrás de cada expediente hay una persona que lleva años construyendo una vida aquí, a menudo sin que el sistema la vea. Me pesa porque sé que es una respuesta al síntoma, no a la enfermedad. Mientras no existan vías reales para llegar con una autorización de residencia antes de salir, seguiremos necesitando regularizaciones extraordinarias. Y habrá personas que no consigan regularizarse ni siquiera con muchos años en la invisibilidad.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Me alegra porque detrás de cada expediente hay una persona que lleva años construyendo una vida aquí, a menudo sin que el sistema la vea. Me pesa porque sé que es una respuesta al síntoma, no a la enfermedad. Mientras no existan vías reales para llegar con una autorización de residencia antes de salir, seguiremos necesitando regularizaciones extraordinarias. Y habrá personas que no consigan regularizarse ni siquiera con muchos años en la invisibilidad.",
+              "href": null
+            }
+          ],
+          "icon": null,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-8045-a3da-f6b3c8a43814",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "La cooperación ordenada, libre y regular no es un ideal abstracto. Es la única respuesta estructural que conocemos. Es en lo que creo, y es por lo que trabajo.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": false,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "La cooperación ordenada, libre y regular no es un ideal abstracto. Es la única respuesta estructural que conocemos. Es en lo que creo, y es por lo que trabajo.",
+              "href": null
+            }
+          ],
+          "icon": null,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-8047-b356-f0be202c770d",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "divider",
+        "divider": {},
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-8044-aff5-caae498f01da",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Ángela Morales Aristizábal es CEO y fundadora de AMA Consultores (amaconsultores.eu), especializada en Gobernanza y Derechos Humanos, Sistemas de Movilidad Internacional y Gestión migratoria, y candidata doctoral en el programa DMICD de la Universidad Pontificia Comillas. Su investigación analiza por qué las vías de contratación en origen entre España y Colombia no han escalado como vía regular de migración, y el papel de la cooperación bilateral en el marco del Pacto Mundial para la Migración.",
+                "link": null
+              },
+              "annotations": {
+                "bold": false,
+                "italic": true,
+                "strikethrough": false,
+                "underline": false,
+                "code": false,
+                "color": "default"
+              },
+              "plain_text": "Ángela Morales Aristizábal es CEO y fundadora de AMA Consultores (amaconsultores.eu), especializada en Gobernanza y Derechos Humanos, Sistemas de Movilidad Internacional y Gestión migratoria, y candidata doctoral en el programa DMICD de la Universidad Pontificia Comillas. Su investigación analiza por qué las vías de contratación en origen entre España y Colombia no han escalado como vía regular de migración, y el papel de la cooperación bilateral en el marco del Pacto Mundial para la Migración.",
+              "href": null
+            }
+          ],
+          "icon": null,
+          "color": "default"
+        },
+        "archived": false
+      },
+      {
+        "object": "block",
+        "id": "349a7a19-928e-80d6-8ec3-f414723f8d89",
+        "parent": {
+          "type": "page_id",
+          "page_id": "333a7a19-928e-8043-aa89-ffd99bfbde84"
+        },
+        "created_time": "2026-04-21T17:26:00.000Z",
+        "last_edited_time": "2026-04-21T17:26:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "333d872b-594c-814f-9a80-0002e3073207"
+        },
+        "has_children": false,
+        "in_trash": false,
+        "type": "divider",
+        "divider": {},
         "archived": false
       }
     ]
-  },
-  {
-    "id": "333a7a19-928e-80a5-a6a7-d95aa6fbe290",
-    "title": "Getting Started with Notion Databases",
-    "slug": "getting-started-notion-databases",
-    "excerpt": "Learn how to create and organize your first Notion database with this comprehensive beginner's guide.",
-    "category": "Guias",
-    "publishedDate": "2026-03-28",
-    "author": "Sarah Chen",
-    "featuredImage": null,
-    "content": []
   }
 ]

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Routes, BrowserRouter as Router, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { Route, Routes, HashRouter as Router, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { Toaster } from '@/components/ui/toaster';
 import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
@@ -38,40 +38,10 @@ function ScrollToTop() {
   return null;
 }
 
-// Legacy hash redirect handler
-function LegacyHashRedirect() {
-  const navigate = useNavigate();
-  const location = useLocation();
-  
-  useEffect(() => {
-    // Handle legacy hash anchors
-    if (location.hash) {
-      const hash = location.hash.replace('#', '');
-      const redirectMap = {
-        'regularizacion': '/servicios/regularizacion',
-        'movilidad': '/servicios/movilidad',
-        'convenios': '/servicios/convenios',
-        'colombia': '/servicios/colombia',
-        'entidades': '/servicios/empresas',
-        'equipo': '/equipo',
-        'asesoria': '/contacto', // Redirigir a contacto ya que ahora es modal
-        'contacto': '/contacto'
-      };
-      
-      if (redirectMap[hash]) {
-        navigate(redirectMap[hash], { replace: true });
-      }
-    }
-  }, [location, navigate]);
-  
-  return null;
-}
-
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <LegacyHashRedirect />
       <AnalyticsProvider>
       <MainLayout>
         <Routes>

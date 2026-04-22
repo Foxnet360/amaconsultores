@@ -32,3 +32,8 @@ coverage/
 
 # OpenSpec changes (opcional - comenta si quieres versionar)
 # .opencode/
+
+# Secret files
+opencode.json
+Referencias/tokens.md
+HOSTINGER_DEPLOY_GUIDE.md

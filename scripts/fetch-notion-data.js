@@ -1,5 +1,5 @@
-/* eslint-env node */
 #!/usr/bin/env node
+/* eslint-env node */
 
 /**
  * Script para descargar datos de Notion durante el build

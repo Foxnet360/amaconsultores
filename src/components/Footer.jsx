@@ -24,6 +24,7 @@ const Footer = () => {
       { name: 'Política de Privacidad', path: '/politica-de-privacidad' },
       { name: 'Aviso Legal', path: '/aviso-legal' },
       { name: 'Política de Cookies', path: '/politica-de-cookies' },
+      { name: 'Condiciones del Servicio', path: '/condiciones-servicio' },
     ],
   };
 
@@ -41,8 +42,7 @@ const Footer = () => {
             />
             </Link>
             <p className="font-lato text-white/70 text-sm leading-relaxed">
-              Consultoría especializada en migraciones internacionales y proyectos sociales 
-              para personas y entidades en España y Colombia.
+              Equipo con presencia jurídica en España y Colombia. Clientes en todo el mundo.
             </p>
           </div>
 
@@ -115,35 +115,42 @@ const Footer = () => {
               href="/#asesoria"
               className="inline-flex items-center justify-center gap-2 mt-6 px-6 py-3 bg-gold hover:bg-gold-dark text-primary-dark font-poppins font-semibold rounded-lg transition-all duration-300 text-sm"
             >
-              Agendar consulta
+              Agenda tu asesoría — 50€
             </a>
           </div>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="border-t border-white/10 pt-8 mb-6">
+          <p className="font-lato text-xs text-white/50 text-center leading-relaxed">
+            El equipo de AMA Consultores integra abogados titulados en Colombia y en España. En España, AMA Consultores opera como consultora especializada y, para las actuaciones que requieren firma letrada ante tribunales o administraciones españolas, coordina con abogados colaboradores debidamente colegiados en el Colegio de Abogados correspondiente. En Colombia, las actuaciones jurídicas son realizadas por abogados colegiados en ejercicio en el territorio colombiano.
+          </p>
         </div>
 
         {/* Legal Links y Copyright */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-lato text-sm text-white/50">
-              © {currentYear} AMA Consultores. Todos los derechos reservados.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 items-center">
-              {footerLinks.legal.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="font-lato text-sm text-white/50 hover:text-gold transition-colors underline"
-                >
-                  {link.name}
-                </Link>
+              © {currentYear} AMA Consultores |{" "}
+              {footerLinks.legal.map((link, idx) => (
+                <React.Fragment key={link.path}>
+                  <Link
+                    to={link.path}
+                    className="hover:text-gold transition-colors underline"
+                  >
+                    {link.name}
+                  </Link>
+                  {idx < footerLinks.legal.length - 1 && " | "}
+                </React.Fragment>
               ))}
-              <button
-                onClick={() => setShowCookiePrefs(true)}
-                className="font-lato text-sm text-white/50 hover:text-gold transition-colors underline flex items-center gap-1"
-              >
-                <Cookie size={14} />
-                Configuración de cookies
-              </button>
-            </div>
+            </p>
+            <button
+              onClick={() => setShowCookiePrefs(true)}
+              className="font-lato text-sm text-white/50 hover:text-gold transition-colors underline flex items-center gap-1"
+            >
+              <Cookie size={14} />
+              Configuración de cookies
+            </button>
           </div>
         </div>
       </div>

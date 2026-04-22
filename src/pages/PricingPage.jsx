@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 
 const PricingPage = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Helmet>
@@ -73,9 +74,22 @@ const PricingPage = () => {
                   <h2 className="text-2xl font-bold text-white mb-6">Regularización Migratoria</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <PricingCard
+                      title="Asesoría inicial"
+                      price="50€ IVA incluido"
+                      description="Se descuenta del total si continúas"
+                      icon={Calculator}
+                      features={[
+                        "Consulta personalizada de 30 minutos",
+                        "Análisis de tu situación",
+                        "Orientación sobre vías disponibles",
+                        "Elaboración de un plan de acción"
+                      ]}
+                      highlighted
+                    />
+                    <PricingCard
                       title="Arraigo (cualquier tipo)"
                       price="380€ IVA incluido"
-                      description="Arraigo social, laboral, familiar o por estudios"
+                      description="Tasas a cargo del cliente"
                       icon={FileCheck}
                       features={[
                         "Asesoría personalizada",
@@ -87,7 +101,7 @@ const PricingPage = () => {
                     <PricingCard
                       title="Reagrupación Familiar"
                       price="380€ IVA incluido"
-                      description="Trámites de reagrupación familiar completa"
+                      description="Tasas a cargo del cliente"
                       icon={Globe}
                       features={[
                         "Evaluación de viabilidad",
@@ -97,27 +111,27 @@ const PricingPage = () => {
                       ]}
                     />
                     <PricingCard
+                      title="Residencias por circunstancias excepcionales"
+                      price="380€ IVA incluido"
+                      description="Tasas a cargo del cliente"
+                      icon={Building2}
+                      features={[
+                        "Evaluación de viabilidad",
+                        "Preparación de expediente",
+                        "Seguimiento ante administración",
+                        "Asesoría post-concesión"
+                      ]}
+                    />
+                    <PricingCard
                       title="Nacionalidad Española"
                       price="500€ IVA incluido"
-                      description="Tramitación completa de nacionalidad"
+                      description="Tasas + DELE + CCSE a cargo del cliente"
                       icon={Building2}
                       features={[
                         "Análisis de requisitos",
                         "Preparación de expediente",
                         "Gestión de exámenes CCSE/DELE",
                         "Seguimiento hasta resolución"
-                      ]}
-                    />
-                    <PricingCard
-                      title="Renovaciones"
-                      price="Desde 300€"
-                      description="Renovación de autorizaciones de residencia"
-                      icon={FileCheck}
-                      features={[
-                        "Evaluación de situación",
-                        "Preparación de solicitud",
-                        "Seguimiento administrativo",
-                        "Resolución y recogida"
                       ]}
                     />
                   </div>
@@ -128,10 +142,46 @@ const PricingPage = () => {
                   <h2 className="text-2xl font-bold text-white mb-6">Movilidad Profesional</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <PricingCard
-                      title="Homologación de Títulos"
-                      price="Desde 360€"
-                      description="Validación de estudios universitarios y profesionales"
+                      title="Cuenta ajena / Cuenta propia"
+                      price="380€ IVA incluido"
+                      description="Tasas a cargo del cliente"
+                      icon={Briefcase}
+                      features={[
+                        "Evaluación de viabilidad",
+                        "Preparación de documentación",
+                        "Gestión ante administración",
+                        "Seguimiento hasta resolución"
+                      ]}
+                    />
+                    <PricingCard
+                      title="Altamente cualificada / Tarjeta Azul UE"
+                      price="1.200€ IVA incluido"
+                      description="Tasas a cargo del cliente"
                       icon={GraduationCap}
+                      features={[
+                        "Evaluación de requisitos",
+                        "Preparación de documentación",
+                        "Gestión de visado",
+                        "Seguimiento hasta resolución"
+                      ]}
+                    />
+                    <PricingCard
+                      title="Visado Nómada Digital"
+                      price="1.200€ IVA incluido"
+                      description="Tasas a cargo del cliente"
+                      icon={Globe}
+                      features={[
+                        "Evaluación de requisitos",
+                        "Preparación de documentación",
+                        "Gestión de visado",
+                        "Asesoría fiscal (Ley Beckham)"
+                      ]}
+                    />
+                    <PricingCard
+                      title="Homologación profesional universitaria"
+                      price="530€ IVA incluido"
+                      description="Titulaciones colombianas: incluye apostillas, legalizaciones y envío. Otras: documentos previos apostillados a cargo del cliente"
+                      icon={FileCheck}
                       features={[
                         "Análisis de título",
                         "Preparación de documentación",
@@ -140,27 +190,39 @@ const PricingPage = () => {
                       ]}
                     />
                     <PricingCard
-                      title="Reconocimiento de Cualificaciones"
-                      price="Desde 500€"
-                      description="Para profesionales de sectores regulados"
-                      icon={Briefcase}
+                      title="Homologación técnica/tecnológica"
+                      price="430€ IVA incluido"
+                      description="Titulaciones colombianas: incluye apostillas, legalizaciones y envío. Otras: documentos previos apostillados a cargo del cliente"
+                      icon={FileCheck}
                       features={[
-                        "Identificación de autoridad competente",
-                        "Preparación documental específica",
-                        "Gestión de compensación formativa",
-                        "Seguimiento hasta resolución"
+                        "Análisis de título",
+                        "Preparación de documentación",
+                        "Gestión ante ministerios",
+                        "Seguimiento del expediente"
                       ]}
                     />
                     <PricingCard
-                      title="Visado Nómada Digital"
-                      price="1.200€ IVA incluido"
-                      description="Residencia para trabajadores remotos"
-                      icon={Globe}
+                      title="Homologación bachillerato"
+                      price="360€ IVA incluido"
+                      description="Titulaciones colombianas: incluye apostillas, legalizaciones y envío. Otras: documentos previos apostillados a cargo del cliente"
+                      icon={FileCheck}
                       features={[
-                        "Evaluación de requisitos",
+                        "Análisis de título",
                         "Preparación de documentación",
-                        "Gestión de visado",
-                        "Asesoría fiscal (Ley Beckham)"
+                        "Gestión ante ministerios",
+                        "Seguimiento del expediente"
+                      ]}
+                    />
+                    <PricingCard
+                      title="Equivalencia de doctorado"
+                      price="1.000€ IVA incluido"
+                      description="Titulaciones colombianas: incluye apostillas, legalizaciones y envío. Otras: documentos previos apostillados a cargo del cliente"
+                      icon={GraduationCap}
+                      features={[
+                        "Análisis de título",
+                        "Preparación de documentación",
+                        "Gestión ante universidad",
+                        "Seguimiento del expediente"
                       ]}
                     />
                   </div>
@@ -171,7 +233,31 @@ const PricingPage = () => {
                   <h2 className="text-2xl font-bold text-white mb-6">Servicios en Colombia</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <PricingCard
-                      title="Apostillas"
+                      title="Visados para Colombia"
+                      price="Consulta tu caso"
+                      description="Tramitación de visados de cualquier tipo"
+                      icon={Globe}
+                      features={[
+                        "Evaluación de visado requerido",
+                        "Preparación de documentación",
+                        "Gestión ante Migración Colombia",
+                        "Seguimiento hasta concesión"
+                      ]}
+                    />
+                    <PricingCard
+                      title="Trámites ante Migración Colombia"
+                      price="Consulta tu caso"
+                      description="Regularización y trámites ante Migración Colombia"
+                      icon={Building2}
+                      features={[
+                        "Evaluación de situación",
+                        "Identificación de vía más adecuada",
+                        "Gestión completa del trámite",
+                        "Seguimiento y resolución"
+                      ]}
+                    />
+                    <PricingCard
+                      title="Apostillas y legalizaciones"
                       price="Consulta tu caso"
                       description="Apostilla de documentos españoles para Colombia"
                       icon={FileCheck}
@@ -183,27 +269,27 @@ const PricingPage = () => {
                       ]}
                     />
                     <PricingCard
-                      title="Visados para Colombia"
-                      price="Desde 300€"
-                      description="Tramitación de visados de cualquier tipo"
-                      icon={Globe}
-                      features={[
-                        "Evaluación de visado requerido",
-                        "Preparación de documentación",
-                        "Gestión ante Migración Colombia",
-                        "Seguimiento hasta concesión"
-                      ]}
-                    />
-                    <PricingCard
-                      title="Trámites Migratorios"
-                      price="Desde 400€"
-                      description="Regularización y trámites ante Migración Colombia"
+                      title="Regularización en Colombia"
+                      price="Consulta tu caso"
+                      description="Regularización de situación migratoria"
                       icon={Building2}
                       features={[
                         "Evaluación de situación",
                         "Identificación de vía más adecuada",
                         "Gestión completa del trámite",
                         "Seguimiento y resolución"
+                      ]}
+                    />
+                    <PricingCard
+                      title="Retorno"
+                      price="Consulta tu caso"
+                      description="Acompañamiento en retorno a Colombia"
+                      icon={Globe}
+                      features={[
+                        "Gestión documental",
+                        "Homologación de títulos españoles",
+                        "Reintegración ante entidades",
+                        "Gestión de doble nacionalidad"
                       ]}
                     />
                   </div>
@@ -216,21 +302,8 @@ const PricingPage = () => {
               <TabsContent value="empresas" className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <PricingCard
-                    title="Consulta Diagnóstico Inicial"
+                    title="Contratación internacional desde Colombia — empresa"
                     price="Presupuesto personalizado"
-                    description="Evaluación completa de necesidades y viabilidad"
-                    icon={Calculator}
-                    features={[
-                      "Reunión de diagnóstico (1-2 horas)",
-                      "Análisis de viabilidad legal",
-                      "Propuesta de solución",
-                      "Presupuesto detallado"
-                    ]}
-                    highlighted
-                  />
-                  <PricingCard
-                    title="Selección Completa (4 fases)"
-                    price="Desde 1.800€"
                     description="Proceso integral de selección y contratación"
                     icon={Briefcase}
                     features={[
@@ -239,10 +312,11 @@ const PricingPage = () => {
                       "Fase 3: Entrevistas finales",
                       "Fase 4: Gestión documental completa"
                     ]}
+                    highlighted
                   />
                   <PricingCard
-                    title="Gestión por Trabajador"
-                    price="500€"
+                    title="Acompañamiento al trabajador en destino — TIE y trámites"
+                    price="500€ IVA incluido"
                     description="Tramitación individual de documentación migratoria"
                     icon={FileCheck}
                     features={[
@@ -253,8 +327,20 @@ const PricingPage = () => {
                     ]}
                   />
                   <PricingCard
-                    title="Consultoría para ONGs"
-                    price="Desde 1.500€"
+                    title="Proyectos con financiación pública y europea"
+                    price="Presupuesto personalizado"
+                    description="Asesoría en proyectos FAMI, FSE+, Next Generation EU"
+                    icon={Building2}
+                    features={[
+                      "Identificación de convocatorias",
+                      "Formulación técnica",
+                      "Presupuesto y seguimiento",
+                      "Justificación e informes"
+                    ]}
+                  />
+                  <PricingCard
+                    title="Consultoría para el tercer sector"
+                    price="Presupuesto personalizado"
                     description="Asesoría especializada para el tercer sector"
                     icon={Building2}
                     features={[
@@ -289,7 +375,7 @@ const PricingPage = () => {
               <div className="max-w-3xl mx-auto space-y-6">
                 <FAQItem 
                   question="¿Los precios incluyen tasas oficiales?"
-                  answer="No, nuestros precios son por servicio de asesoría y gestión. Las tasas oficiales (que van desde 16,50€ hasta 238€ según el trámite) corren por cuenta del cliente o empresa, ya que se pagan directamente a la administración."
+                  answer="No, nuestros precios son por servicio de asesoría y gestión. Las tasas oficiales son siempre a cargo del cliente o empresa, ya que se pagan directamente a la administración."
                 />
                 <FAQItem 
                   question="¿Hay pagos a plazos?"
@@ -317,14 +403,14 @@ const PricingPage = () => {
                   ¿Tienes dudas sobre nuestras tarifas?
                 </h2>
                 <p className="font-lato text-white/80 text-lg mb-8 max-w-2xl mx-auto">
-                  Agenda una consulta gratuita de 15 minutos y te explicamos todo sin compromiso.
+                  Agenda una asesoría personalizada. Analizaremos tu caso específico y te informaremos de las tarifas antes de comenzar.
                 </p>
                 <Button 
                   size="lg"
                   className="bg-gold hover:bg-gold-dark text-primary-dark font-bold px-8 py-6 text-lg"
-                  onClick={() => window.location.href = '/#asesoria'}
+                  onClick={() => navigate('/agenda')}
                 >
-                  Agendar consulta gratuita
+                  Agenda tu asesoría — 50€
                 </Button>
               </div>
             </section>
@@ -372,14 +458,8 @@ const NoteBox = () => (
         <h3 className="font-semibold text-white mb-2">Tasas oficiales no incluidas</h3>
         <p className="text-white/80 mb-2">
           Los precios mostrados son por nuestro servicio de asesoría y gestión. Las tasas oficiales 
-          que debes pagar a la administración no están incluidas y varían según el trámite:
+          que debes pagar a la administración no están incluidas y son siempre a cargo del cliente.
         </p>
-        <ul className="space-y-1 text-white/70 text-sm">
-          <li>• Tasa de autorización de residencia: 16,50€</li>
-          <li>• Tasa de visado (desde el extranjero): 80€ - 238€</li>
-          <li>• Tasa de nacionalidad: 104,05€</li>
-          <li>• Otras tasas según trámite específico</li>
-        </ul>
       </div>
     </div>
   </div>

@@ -126,3 +126,27 @@ export const fetchRelatedPosts = async (currentSlug, category, limit = 3) => {
     return [];
   }
 };
+
+// Fetch previous and next posts by published date
+export const fetchPrevNextPosts = async (currentSlug) => {
+  try {
+    const posts = await loadPosts();
+    if (!posts) return { prevPost: null, nextPost: null };
+    
+    // Sort by published date descending (newest first)
+    const sortedPosts = [...posts].sort((a, b) => 
+      new Date(b.publishedDate) - new Date(a.publishedDate)
+    );
+    
+    const currentIndex = sortedPosts.findIndex(p => p.slug === currentSlug);
+    if (currentIndex === -1) return { prevPost: null, nextPost: null };
+    
+    return {
+      prevPost: sortedPosts[currentIndex + 1] || null,
+      nextPost: sortedPosts[currentIndex - 1] || null,
+    };
+  } catch (error) {
+    console.error('Error fetching prev/next posts:', error.message);
+    return { prevPost: null, nextPost: null };
+  }
+};

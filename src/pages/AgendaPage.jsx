@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Home, Calendar, Clock, CreditCard, Monitor } from 'lucide-react';
+import { ChevronRight, Home, Calendar, Clock, CreditCard, Monitor, AlertCircle } from 'lucide-react';
 import TidyCalEmbed from '@/components/TidyCalEmbed';
 import { Button } from '@/components/ui/button';
 
 const AgendaPage = () => {
+  const [termsAccepted, setTermsAccepted] = useState(false);
+
   return (
     <>
       <Helmet>
@@ -119,6 +121,8 @@ const AgendaPage = () => {
                 <input
                   type="checkbox"
                   id="condiciones-check"
+                  checked={termsAccepted}
+                  onChange={(e) => setTermsAccepted(e.target.checked)}
                   className="mt-1 w-5 h-5 rounded border-white/30 bg-transparent text-gold-400 focus:ring-gold-500"
                 />
                 <span className="text-white/80 text-sm">
@@ -129,6 +133,9 @@ const AgendaPage = () => {
                   de AMA Consultores, incluyendo la política de honorarios, el alcance de la consultoría y la obligación de medios. Entiendo que la contratación del servicio no garantiza una resolución administrativa favorable.
                 </span>
               </label>
+              {!termsAccepted && (
+                <p className="text-gold-400 text-sm mt-2 ml-8">Debes aceptar las condiciones para continuar con la reserva.</p>
+              )}
             </motion.div>
 
             {/* TidyCal Embed */}
@@ -137,10 +144,22 @@ const AgendaPage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <TidyCalEmbed 
-                url="https://tidycal.com/amaconsultores"
-                height="800px"
-              />
+              {termsAccepted ? (
+                <TidyCalEmbed 
+                  url="https://tidycal.com/amaconsultores"
+                  height="800px"
+                />
+              ) : (
+                <div className="bg-navy-800 border border-white/10 rounded-xl p-8 text-center">
+                  <AlertCircle className="mx-auto text-gold-400 mb-4" size={48} />
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    Acepta las condiciones para continuar
+                  </h3>
+                  <p className="text-white/70">
+                    Debes leer y aceptar las Condiciones Generales del Servicio antes de realizar la reserva.
+                  </p>
+                </div>
+              )}
             </motion.div>
 
             {/* Alternative Contact */}

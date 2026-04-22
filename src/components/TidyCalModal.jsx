@@ -91,7 +91,7 @@ const TidyCalModal = ({ isOpen, onClose }) => {
                   Agenda tu asesoría
                 </h2>
                 <p className="font-lato text-sm text-white/70 mt-1">
-                  Reserva una consulta gratuita de 30 minutos
+                  Reserva una consulta personalizada de 30 minutos por 50€
                 </p>
               </div>
               <button

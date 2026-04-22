@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, MessageCircle, Clock, AlertTriangle, FileText, User, Building, Briefcase, Users, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, AlertTriangle, FileText, User, Building, Briefcase, Users, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -86,11 +86,6 @@ const ContactPage = () => {
       ...formData,
       [name]: type === 'checkbox' ? checked : value
     });
-  };
-
-  const getWhatsAppLink = () => {
-    const message = `Hola, soy ${formData.nombre || '[nombre]'}. Vivo en ${formData.pais || '[país]'} y me gustaría consultar sobre servicios de migración.`;
-    return `https://wa.me/573017174478?text=${encodeURIComponent(message)}`;
   };
 
   const getMensajePlaceholder = () => {
@@ -363,10 +358,7 @@ const ContactPage = () => {
                             >
                               Política de Privacidad
                             </a>
-                            {' '}* 
-                            <span className="text-xs text-gray-500 block mt-1">
-                              Tus datos serán tratados por AMA Consultores para responder a tu consulta.
-                            </span>
+                            {' '}y consiento el tratamiento de mis datos personales para la atención de mi consulta. *
                           </span>
                         </label>
 
@@ -404,8 +396,7 @@ const ContactPage = () => {
                             className="mt-1 w-5 h-5 rounded border-slate-600 bg-slate-700 text-gold focus:ring-gold focus:ring-offset-0"
                           />
                           <span className="text-sm text-gray-400 font-lato leading-relaxed">
-                            Acepto recibir información sobre servicios, novedades y contenidos de interés 
-                            relacionados con migraciones (opcional)
+                            Acepto recibir información sobre los servicios y novedades de AMA Consultores por correo electrónico. (opcional)
                           </span>
                         </label>
                       </div>
@@ -428,22 +419,6 @@ const ContactPage = () => {
                     </Button>
                   </form>
 
-                  {/* WhatsApp Alternative */}
-                  <div className="mt-6 pt-6 border-t border-slate-800">
-                    <p className="text-gray-400 text-sm mb-4 text-center font-lato">O contáctanos por WhatsApp</p>
-                    <a
-                      href={getWhatsAppLink()}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors font-poppins"
-                    >
-                      <MessageCircle size={20} />
-                      Contactar por WhatsApp Colombia
-                    </a>
-                    <p className="text-gray-500 text-xs text-center mt-2 font-lato">
-                      Gestionado por Xiomara Sánchez como primer filtro de contacto
-                    </p>
-                  </div>
                 </div>
               </motion.div>
 
@@ -458,7 +433,6 @@ const ContactPage = () => {
                 <Alert className="bg-amber-500/10 border-amber-500/50 text-amber-200">
                   <AlertTriangle className="h-5 w-5 text-amber-500" />
                   <AlertDescription className="text-amber-100 font-lato">
-                    <strong className="block mb-1 font-poppins">Respondo en un plazo de 48 horas laborables.</strong>
                     Las consultas tienen coste — al contactar te informaré de las tarifas antes de comenzar.
                   </AlertDescription>
                 </Alert>
@@ -469,7 +443,7 @@ const ContactPage = () => {
                   
                   <div className="space-y-4">
                     <a
-                      href="mailto:angela.morales@amaconsultores.eu"
+                      href="mailto:asesorias@amaconsultores.eu"
                       className="flex items-center gap-4 p-4 bg-slate-900/50 border border-slate-800 rounded-xl hover:border-gold/50 transition-colors group"
                     >
                       <div className="w-12 h-12 bg-gold/10 rounded-lg flex items-center justify-center group-hover:bg-gold/20 transition-colors">
@@ -477,7 +451,7 @@ const ContactPage = () => {
                       </div>
                       <div>
                         <p className="text-sm text-gray-400 font-lato">Email principal</p>
-                        <p className="text-white font-medium font-lato">angela.morales@amaconsultores.eu</p>
+                        <p className="text-white font-medium font-lato">asesorias@amaconsultores.eu</p>
                       </div>
                     </a>
 

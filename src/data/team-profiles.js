@@ -9,7 +9,7 @@ export const teamProfiles = [
     name: 'Ángela Morales Aristizábal',
     role: 'CEO — AMA Consultores',
     email: 'asesorias@amaconsultores.eu',
-    photo: '/team/angela.jpg',
+    photo: '/team/angela.jpeg',
     initials: 'AM',
     bio: `Nací en Calarcá, Quindío, y hoy tengo hogar también en España. Me siento parte de ambos mundos, y esa mezcla marca mi forma de trabajar y de acompañar a quienes migran. He vivido y estudiado en Colombia, Alemania, Italia, Argentina, Inglaterra y España. Sé lo que significa llegar a un país nuevo con un título que nadie reconoce y una mochila llena de ganas.
 
@@ -25,7 +25,7 @@ En diciembre de 2025 decidí dar un paso natural y poner toda esa experiencia al
     role: 'Abogado Colegiado · España',
     email: '',
     web: 'rafaelreyespulido.eu',
-    photo: null, // Placeholder
+    photo: '/team/rafael.jpeg',
     initials: 'RR',
     placeholderColor: '#4A5568',
     bio: `Soy abogado colegiado en España, graduado en Derecho y con Máster de Acceso a la Abogacía por la UNED. Me especializo en Derecho de Extranjería, Administrativo, Civil, Familia y Penal. Colaboro con AMA Consultores en todas las actuaciones que requieren representación letrada ante juzgados y tribunales, aportando el respaldo jurídico procesal que cada caso necesita.`,
@@ -35,7 +35,7 @@ En diciembre de 2025 decidí dar un paso natural y poner toda esa experiencia al
     name: 'Xiomara Sánchez Arias',
     role: 'Acompañamiento y gestión documental · Colombia',
     email: 'info@amaconsultores.eu',
-    photo: '/team/xiomara.jpg',
+    photo: '/team/xiomara.jpeg',
     initials: 'XS',
     bio: `Soy Técnica en Contabilización de Operaciones Comerciales y Financieras y Tecnóloga en Gestión Jurídica de la Información. Trabajo desde Colombia acompañando a cada cliente en el proceso de reunir y organizar su documentación — ese paso que parece pequeño pero que puede definir el resultado de un trámite. Me encargo también de mantener el orden administrativo de AMA Consultores para que nada se pierda por el camino. Soy organizada, cercana y paciente. Para mí, cada expediente tiene nombre y apellidos, y eso se nota en cómo trabajo.`,
   },
@@ -44,7 +44,7 @@ En diciembre de 2025 decidí dar un paso natural y poner toda esa experiencia al
     name: 'Irene Hernández Gálvez',
     role: 'Asesora de Acompañamiento Migratorio · Colombia',
     email: 'asesorias@amaconsultores.eu',
-    photo: null, // Placeholder
+    photo: '/team/irene.jpeg',
     initials: 'IH',
     placeholderColor: '#4A5568',
     formacion: 'Abogada titulada en Colombia con equivalencia oficial en España · Formación en administración y finanzas · Máster en Derecho Laboral y Empresa (en curso)',

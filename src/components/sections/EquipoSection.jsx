@@ -6,44 +6,42 @@ import { ExternalLink, Quote, Linkedin } from 'lucide-react';
 const teamMembers = [
   {
     name: 'Ángela Morales Aristizábal',
-    role: 'CEO & Fundadora',
-    description: 'Llevo más de 10 años dedicada a la consultoría en migraciones y proyectos sociales. Mi compromiso es acompañar a cada persona en su proceso con cercanía y profesionalidad.',
-    image: null, // Placeholder until photo available
+    role: 'CEO — AMA Consultores',
+    email: 'asesorias@amaconsultores.eu',
+    description: 'Nací en Calarcá, Quindío, y hoy tengo hogar también en España. Me siento parte de ambos mundos, y esa mezcla marca mi forma de trabajar y de acompañar a quienes migran. He vivido y estudiado en Colombia, Alemania, Italia, Argentina, Inglaterra y España. Sé lo que significa llegar a un país nuevo con un título que nadie reconoce y una mochila llena de ganas. Llevo más de diez años dedicada al derecho migratorio y a los derechos humanos. Empecé desde grandes organizaciones y hoy ejerzo desde mi propia consultoría. Tengo dos másteres internacionales —en Gobernanza y Derechos Humanos, y en Migraciones y Sistemas de Acogida Internacional— y actualmente soy doctoranda en Estudios Migratorios. He gestionado proyectos sociales con fondos europeos por más de dos millones de euros y he trabajado sobre el terreno con campesinos, líderes sociales, comunidades indígenas, mujeres y familias en situación de vulnerabilidad. Esa combinación de gestión técnica y trabajo humano me enseñó que las políticas migratorias cobran sentido solo cuando se entienden desde las historias reales de las personas. En diciembre de 2025 decidí dar un paso natural y poner toda esa experiencia al servicio directo de quienes migran, creando AMA Consultores. Acompaño procesos migratorios con una mirada integral y empática: porque conozco el sistema por dentro... y también sé lo que se siente desde fuera. La educación fue mi palanca para avanzar; hoy intento serla para otros.',
+    image: '/team/angela.jpeg',
     initials: 'AM',
-    color: 'bg-gold-500',
-    link: null,
-    linkedin: null
+    color: 'bg-[#4A5568]',
+    link: null
   },
   {
     name: 'Rafael Reyes Pulido',
-    role: 'Abogado Colegiado',
-    description: 'Especializado en derecho migratorio y extranjería. Coordinamos cuando los casos requieren firma letrada para garantizar la mejor defensa de tus derechos.',
-    image: null,
+    role: 'Abogado Colegiado · España',
+    description: 'Soy abogado colegiado en España, graduado en Derecho y con Máster de Acceso a la Abogacía por la UNED. Me especializo en Derecho de Extranjería, Administrativo, Civil, Familia y Penal. Colaboro con AMA Consultores en todas las actuaciones que requieren representación letrada ante juzgados y tribunales, aportando el respaldo jurídico procesal que cada caso necesita.',
+    image: '/team/rafael.jpeg',
     initials: 'RR',
-    color: 'bg-gray-600',
-    link: 'https://rafaelreyespulido.eu',
-    linkedin: null
+    color: 'bg-[#4A5568]',
+    link: 'https://rafaelreyespulido.eu'
   },
   {
     name: 'Xiomara Sánchez Arias',
-    role: 'Gestión Documental',
-    description: 'Me encargo de que toda la documentación esté en orden y los trámites avancen correctamente. Soy el primer contacto para resolver dudas administrativas.',
-    image: null,
+    role: 'Acompañamiento y gestión documental · Colombia',
+    email: 'info@amaconsultores.eu',
+    description: 'Soy Técnica en Contabilización de Operaciones Comerciales y Financieras y Tecnóloga en Gestión Jurídica de la Información. Trabajo desde Colombia acompañando a cada cliente en el proceso de reunir y organizar su documentación — ese paso que parece pequeño pero que puede definir el resultado de un trámite. Me encargo también de mantener el orden administrativo de AMA Consultores para que nada se pierda por el camino. Soy organizada, cercana y paciente. Para mí, cada expediente tiene nombre y apellidos, y eso se nota en cómo trabajo.',
+    image: '/team/xiomara.jpeg',
     initials: 'XS',
-    color: 'bg-gold-600',
-    link: null,
-    linkedin: null
+    color: 'bg-[#4A5568]',
+    link: null
   },
   {
     name: 'Irene Hernández Gálvez',
-    role: 'Asesora Migratoria',
-    description: 'Conozco de primera mano los desafíos de la movilidad internacional. Mi experiencia personal me permite empatizar y guiar mejor a quienes inician este camino.',
-    image: null,
+    role: 'Asesora de Acompañamiento Migratorio · Colombia',
+    email: 'asesorias@amaconsultores.eu',
+    description: 'Hace nueve años emprendí uno de los viajes más transformadores de mi vida: dejar mi país con el corazón lleno de sueños, ilusiones y metas por cumplir, sin imaginar del todo lo que significaba empezar de nuevo. Migrar es mucho más que cambiar de lugar; es soltar, desaprender y reconstruirse desde lo desconocido. Es atravesar momentos de incertidumbre, sentir la pérdida de identidad y enfrentar la soledad que aparece cuando creemos que todo está perdido. Mi historia, tanto personal como profesional, está profundamente marcada por esta experiencia. Gracias a ella, hoy miro a quienes migramos con una sensibilidad especial: desde la empatía, el respeto y la comprensión genuina de cada proceso, de cada lucha silenciosa y de cada pequeño logro que merece ser reconocido. Por ello, apoyándome en mis conocimientos y experiencia en materia migratoria, quiero acompañar a aquellas personas que actualmente transitan este proceso o están por iniciarlo, ofreciendo, a través de AMA Consultores, soluciones eficaces a sus necesidades.',
+    image: '/team/irene.jpeg',
     initials: 'IH',
-    color: 'bg-gray-600',
-    link: null,
-    linkedin: null,
-    historiaPersonal: true
+    color: 'bg-[#4A5568]',
+    link: null
   }
 ];
 
@@ -62,8 +60,7 @@ const EquipoSection = () => {
             Quiénes Somos
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Un equipo con colegiación en España y Colombia.
-            Cobertura jurídica completa en los dos sistemas.
+            Cobertura jurídica en España y Colombia. Consultora especializada con red de abogados colegiados colaboradores en ambos países.
           </p>
         </motion.div>
 
@@ -77,7 +74,7 @@ const EquipoSection = () => {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className={`h-full flex flex-col bg-white border-2 ${member.historiaPersonal ? 'border-gold-400 shadow-xl' : 'border-gray-200 shadow-md hover:shadow-lg transition-shadow'}`}>
+              <Card className={`h-full flex flex-col bg-white border-2 border-gray-200 shadow-md hover:shadow-lg transition-shadow`}>
                 <CardContent className="p-6 flex flex-col flex-grow">
                   {/* Photo or Placeholder */}
                   <div className="flex justify-center mb-6">
@@ -100,20 +97,6 @@ const EquipoSection = () => {
                     <p className="text-gold-500 font-medium mb-4">{member.role}</p>
                     
                     <p className="text-gray-600 text-sm mb-4 italic flex-grow">"{member.description}"</p>
-
-                    {/* Historia Personal - Irene */}
-                    {member.historiaPersonal && (
-                      <div className="mt-4 p-4 bg-gradient-to-br from-gold-50 to-gold-100 rounded-lg border-l-4 border-gold-400 shadow-sm">
-                        <div className="flex items-center gap-2 mb-2">
-                          <Quote className="text-gold-500" size={16} />
-                          <span className="text-gold-700 font-semibold text-sm">Historia Personal</span>
-                        </div>
-                        <p className="text-gold-800 text-sm italic">
-                          "Mi propia experiencia migratoria me enseñó que detrás de cada trámite 
-                          hay una historia humana. Por eso trabajo con empatía y dedicación."
-                        </p>
-                      </div>
-                    )}
 
                     {/* Links */}
                     <div className="mt-4 flex justify-center gap-3">
